@@ -96,6 +96,7 @@ members = [
     "transaction-error",
     "validator-exit",
     "vote-interface",
+    "bad-addresses"
 ]
 
 resolver = "2"
@@ -291,6 +292,7 @@ solana-shred-version = { path = "shred-version", version = "2.2.1" }
 solana-signature = { path = "signature", version = "2.3.0", default-features = false }
 solana-signer = { path = "signer", version = "2.2.1" }
 solana-slot-hashes = { path = "slot-hashes", version = "2.2.1" }
+badchain-bad-addresses = {path = "bad-addresses",version = "0.0.1"}
 solana-slot-history = { path = "slot-history", version = "2.2.1" }
 solana-stable-layout = { path = "stable-layout", version = "2.2.1" }
 solana-stake-interface = { version = "1.2.1" }

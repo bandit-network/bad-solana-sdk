@@ -97,6 +97,7 @@ use {
     solana_sysvar_id::SysvarId,
 };
 
+pub mod bad_addresses;
 pub mod clock;
 pub mod epoch_rewards;
 pub mod epoch_schedule;

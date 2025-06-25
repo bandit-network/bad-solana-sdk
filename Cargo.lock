@@ -268,6 +268,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "badchain-bad-addresses"
+version = "0.0.1"
+dependencies = [
+ "rand 0.8.5",
+ "serde",
+ "serde_derive",
+ "solana-hash",
+ "solana-pubkey",
+ "solana-sdk-ids",
+ "solana-sha256-hasher",
+ "solana-sysvar-id",
+]
+
+[[package]]
 name = "base64"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4025,11 +4039,13 @@ name = "solana-sysvar"
 version = "2.2.2"
 dependencies = [
  "anyhow",
+ "badchain-bad-addresses",
  "base64 0.22.1",
  "bincode",
  "bytemuck",
  "bytemuck_derive",
  "lazy_static",
+ "rand 0.8.5",
  "serde",
  "serde_derive",
  "serial_test",

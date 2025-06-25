@@ -110,6 +110,10 @@ pub mod sysvar {
     pub mod stake_history {
         solana_pubkey::declare_id!("SysvarStakeHistory1111111111111111111111111");
     }
+
+    pub mod bad_addresses {
+        solana_pubkey::declare_id!("SysvarBadAddresses1111111111111111111111111");
+    }
 }
 
 pub mod zk_token_proof_program {
