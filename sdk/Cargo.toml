@@ -1,6 +1,6 @@
 [package]
 name = "bad-solana-sdk"
-version = "2.2.1"
+version = "2.2.2"
 description = "Badchain fork of Solana SDK"
 repository = "https://github.com/bandit-network/bad-solana-sdk"
 license = "Apache-2.0"
