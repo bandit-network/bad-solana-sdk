@@ -104,6 +104,7 @@ pub mod epoch_schedule;
 pub mod fees;
 pub mod last_restart_slot;
 pub mod program_stubs;
+pub mod raffle_649;
 pub mod recent_blockhashes;
 pub mod rent;
 pub mod rewards;

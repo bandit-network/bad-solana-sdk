@@ -95,15 +95,16 @@ members = [
     "transaction-error",
     "validator-exit",
     "vote-interface",
-    "bad-addresses"
+    "bad-addresses",
+    "raffle-649"
 ]
 
 resolver = "2"
 
 [workspace.package]
-authors = ["Anza Maintainers <maintainers@anza.xyz>"]
-repository = "https://github.com/anza-xyz/solana-sdk"
-homepage = "https://anza.xyz/"
+authors = ["Shreetheja <shreetheja@bandit.network>"]
+repository = "https://github.com/bandit-network/bad-solana-sdk"
+homepage = "https://badchain.org/"
 license = "Apache-2.0"
 edition = "2021"
 
@@ -291,6 +292,7 @@ solana-signature = { path = "signature", version = "2.3.0", default-features = f
 solana-signer = { path = "signer", version = "2.2.1" }
 solana-slot-hashes = { path = "slot-hashes", version = "2.2.1" }
 badchain-bad-addresses = {path = "bad-addresses",version = "0.0.1"}
+badchain-raffle-649 = {path = "raffle-649",version = "0.0.1"}
 solana-slot-history = { path = "slot-history", version = "2.2.1" }
 solana-stable-layout = { path = "stable-layout", version = "2.2.1" }
 solana-stake-interface = { version = "1.2.1" }

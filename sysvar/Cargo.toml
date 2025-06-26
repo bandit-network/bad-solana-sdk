@@ -38,6 +38,7 @@ serde = [
     "solana-rent/serde",
     "solana-slot-hashes/serde",
     "badchain-bad-addresses/serde",
+    "badchain-raffle-649/serde",
     "solana-slot-history/serde",
     "solana-stake-interface/serde",
 ]
@@ -72,6 +73,7 @@ solana-slot-history = { workspace = true, features = ["sysvar"] }
 solana-stake-interface = { workspace = true }
 solana-sysvar-id = { workspace = true }
 badchain-bad-addresses = { workspace = true, features = ["sysvar"] }
+badchain-raffle-649 = { workspace = true, features = ["sysvar"] }
 rand = { workspace = true }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]

@@ -74,7 +74,9 @@ solana-keypair = { workspace = true, optional = true, features = [
 ] }
 solana-message = { workspace = true, features = ["serde"] }
 solana-native-token = { workspace = true }
-solana-offchain-message = { workspace = true, optional = true, features = ["verify"] }
+solana-offchain-message = { workspace = true, optional = true, features = [
+    "verify",
+] }
 solana-presigner = { workspace = true, optional = true }
 solana-program = { workspace = true }
 solana-program-memory = { workspace = true }
@@ -101,7 +103,7 @@ solana-time-utils = { workspace = true }
 solana-transaction = { workspace = true, features = [
     "blake3",
     "serde",
-    "verify"
+    "verify",
 ], optional = true }
 solana-transaction-error = { workspace = true, features = [
     "serde",
@@ -112,7 +114,9 @@ thiserror = { workspace = true }
 getrandom = { version = "0.1.1", features = ["wasm-bindgen"] }
 
 [dev-dependencies]
-solana-instructions-sysvar = { workspace = true, features = ["dev-context-only-utils"] }
+solana-instructions-sysvar = { workspace = true, features = [
+    "dev-context-only-utils",
+] }
 solana-program = { workspace = true, features = ["dev-context-only-utils"] }
 solana-sdk = { path = ".", features = ["dev-context-only-utils"] }
 

@@ -265,7 +265,7 @@ mod tests {
     #[serial]
     fn test_random_get(num_entries: usize) {
         let mut bad_addresses = vec![];
-        for i in 0..num_entries {
+        for _ in 0..num_entries {
             bad_addresses.push(Pubkey::new_unique());
         }
 
@@ -312,7 +312,7 @@ mod tests {
     #[serial]
     fn test_pod_slot_hashes(num_entries: usize) {
         let mut bad_addresses = vec![];
-        for i in 0..num_entries {
+        for _ in 0..num_entries {
             bad_addresses.push(Pubkey::new_unique());
         }
 

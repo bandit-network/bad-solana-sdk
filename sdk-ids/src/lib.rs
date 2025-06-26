@@ -114,6 +114,10 @@ pub mod sysvar {
     pub mod bad_addresses {
         solana_pubkey::declare_id!("SysvarBadAddresses1111111111111111111111111");
     }
+
+    pub mod raffle_649 {
+        solana_pubkey::declare_id!("SysvarRaffle6491111111111111111111111111111");
+    }
 }
 
 pub mod zk_token_proof_program {

@@ -282,6 +282,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "badchain-raffle-649"
+version = "0.0.1"
+dependencies = [
+ "serde",
+ "serde_derive",
+ "solana-clock",
+ "solana-sdk-ids",
+ "solana-sdk-macro",
+ "solana-sysvar-id",
+ "static_assertions",
+]
+
+[[package]]
 name = "base64"
 version = "0.12.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4037,6 +4050,7 @@ version = "2.2.2"
 dependencies = [
  "anyhow",
  "badchain-bad-addresses",
+ "badchain-raffle-649",
  "base64 0.22.1",
  "bincode",
  "bytemuck",
