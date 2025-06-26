@@ -268,6 +268,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "bad-solana-sdk"
+version = "2.2.1"
+dependencies = [
+ "bad-solana-sdk",
+ "bincode",
+ "bs58",
+ "getrandom 0.1.16",
+ "serde",
+ "solana-account",
+ "solana-derivation-path",
+ "solana-epoch-info",
+ "solana-epoch-rewards-hasher",
+ "solana-fee-structure",
+ "solana-inflation",
+ "solana-instruction",
+ "solana-instructions-sysvar",
+ "solana-keypair",
+ "solana-message",
+ "solana-native-token",
+ "solana-offchain-message",
+ "solana-presigner",
+ "solana-program",
+ "solana-program-memory",
+ "solana-pubkey",
+ "solana-sanitize",
+ "solana-sdk-ids",
+ "solana-sdk-macro",
+ "solana-seed-derivable",
+ "solana-seed-phrase",
+ "solana-serde",
+ "solana-serde-varint",
+ "solana-short-vec",
+ "solana-shred-version",
+ "solana-signature",
+ "solana-signer",
+ "solana-time-utils",
+ "solana-transaction",
+ "solana-transaction-error",
+ "thiserror 2.0.12",
+]
+
+[[package]]
 name = "badchain-bad-addresses"
 version = "0.0.1"
 dependencies = [
@@ -3741,48 +3783,6 @@ name = "solana-sanitize"
 version = "2.2.1"
 
 [[package]]
-name = "solana-sdk"
-version = "2.3.0"
-dependencies = [
- "bincode",
- "bs58",
- "getrandom 0.1.16",
- "serde",
- "solana-account",
- "solana-derivation-path",
- "solana-epoch-info",
- "solana-epoch-rewards-hasher",
- "solana-fee-structure",
- "solana-inflation",
- "solana-instruction",
- "solana-instructions-sysvar",
- "solana-keypair",
- "solana-message",
- "solana-native-token",
- "solana-offchain-message",
- "solana-presigner",
- "solana-program",
- "solana-program-memory",
- "solana-pubkey",
- "solana-sanitize",
- "solana-sdk",
- "solana-sdk-ids",
- "solana-sdk-macro",
- "solana-seed-derivable",
- "solana-seed-phrase",
- "solana-serde",
- "solana-serde-varint",
- "solana-short-vec",
- "solana-shred-version",
- "solana-signature",
- "solana-signer",
- "solana-time-utils",
- "solana-transaction",
- "solana-transaction-error",
- "thiserror 2.0.12",
-]
-
-[[package]]
 name = "solana-sdk-ids"
 version = "2.2.1"
 dependencies = [
@@ -3803,13 +3803,13 @@ dependencies = [
 name = "solana-sdk-wasm-js"
 version = "1.0.0"
 dependencies = [
+ "bad-solana-sdk",
  "console_error_panic_hook",
  "console_log",
  "js-sys",
  "log",
  "solana-instruction",
  "solana-program",
- "solana-sdk",
  "wasm-bindgen",
 ]
 
@@ -4049,6 +4049,7 @@ name = "solana-sysvar"
 version = "2.2.2"
 dependencies = [
  "anyhow",
+ "bad-solana-sdk",
  "badchain-bad-addresses",
  "badchain-raffle-649",
  "base64 0.22.1",
@@ -4080,7 +4081,6 @@ dependencies = [
  "solana-pubkey",
  "solana-rent",
  "solana-sanitize",
- "solana-sdk",
  "solana-sdk-ids",
  "solana-sdk-macro",
  "solana-sha256-hasher",

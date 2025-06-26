@@ -20,7 +20,7 @@ crate-type = ["cdylib"]
 [dependencies]
 solana-instruction = { workspace = true, features = ["std"] }
 solana-program = { workspace = true }
-solana-sdk = { workspace = true }
+bad-solana-sdk = { workspace = true }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 console_error_panic_hook = { workspace = true }

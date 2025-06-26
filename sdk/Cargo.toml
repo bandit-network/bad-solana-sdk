@@ -1,14 +1,14 @@
 [package]
-name = "solana-sdk"
-description = "Solana SDK"
+name = "bad-solana-sdk"
+version = "2.2.1"
+description = "Badchain fork of Solana SDK"
+repository = "https://github.com/bandit-network/bad-solana-sdk"
+license = "Apache-2.0"
+edition = "2021"
 documentation = "https://docs.rs/solana-sdk"
 readme = "README.md"
-version = "2.3.0"
 authors = { workspace = true }
-repository = { workspace = true }
 homepage = { workspace = true }
-license = { workspace = true }
-edition = { workspace = true }
 include = ["src/**/*", "README.md"]
 
 [package.metadata.docs.rs]
@@ -118,7 +118,7 @@ solana-instructions-sysvar = { workspace = true, features = [
     "dev-context-only-utils",
 ] }
 solana-program = { workspace = true, features = ["dev-context-only-utils"] }
-solana-sdk = { path = ".", features = ["dev-context-only-utils"] }
+bad-solana-sdk = { path = ".", features = ["dev-context-only-utils"] }
 
 [lints]
 workspace = true
