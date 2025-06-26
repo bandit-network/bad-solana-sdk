@@ -68,7 +68,7 @@
 //!     let account_info_iter = &mut accounts.iter();
 //!     let clock_account_info = next_account_info(account_info_iter)?;
 //!
-//!     assert!(clock::check_id(clock_account_info.key));
+//!     assert!(raffle_649::check_id(clock_account_info.key));
 //!
 //!     let clock = Clock::from_account_info(clock_account_info)?;
 //!     msg!("clock: {:#?}", clock);
@@ -124,12 +124,10 @@
 
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
-pub use {
-    badchain_raffle_649::Raffle,
-    solana_sdk_ids::sysvar::raffle_649::{check_id, id, ID},
-};
+pub use badchain_raffle_649::Raffle;
+pub use solana_sdk_ids::sysvar::raffle_649::{check_id, id, ID};
 
 #[cfg(feature = "bincode")]
 impl Sysvar for Raffle {
-    impl_sysvar_get!(sol_get_clock_sysvar);
+    impl_sysvar_get!(sol_get_raffle_sysvar);
 }

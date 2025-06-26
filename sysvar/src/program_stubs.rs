@@ -54,6 +54,9 @@ pub trait SyscallStubs: Sync + Send {
     fn sol_get_clock_sysvar(&self, _var_addr: *mut u8) -> u64 {
         UNSUPPORTED_SYSVAR
     }
+    fn sol_get_raffle_sysvar(&self, _var_addr: *mut u8) -> u64 {
+        UNSUPPORTED_SYSVAR
+    }
     fn sol_get_epoch_schedule_sysvar(&self, _var_addr: *mut u8) -> u64 {
         UNSUPPORTED_SYSVAR
     }
@@ -158,6 +161,14 @@ pub(crate) fn sol_get_sysvar(
 #[cfg(feature = "bincode")]
 pub(crate) fn sol_get_clock_sysvar(var_addr: *mut u8) -> u64 {
     SYSCALL_STUBS.read().unwrap().sol_get_clock_sysvar(var_addr)
+}
+
+#[cfg(feature = "bincode")]
+pub(crate) fn sol_get_raffle_sysvar(var_addr: *mut u8) -> u64 {
+    SYSCALL_STUBS
+        .read()
+        .unwrap()
+        .sol_get_raffle_sysvar(var_addr)
 }
 
 #[cfg(feature = "bincode")]
