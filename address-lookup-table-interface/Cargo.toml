@@ -40,7 +40,7 @@ solana-frozen-abi-macro = { workspace = true, features = [
 ], optional = true }
 solana-instruction = { workspace = true, features = ["std"], optional = true }
 solana-pubkey = { workspace = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 solana-slot-hashes = { workspace = true }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]

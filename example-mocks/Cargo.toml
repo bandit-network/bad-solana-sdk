@@ -23,6 +23,6 @@ solana-keccak-hasher = { workspace = true }
 solana-message = { workspace = true, features = ["serde"] }
 solana-nonce = { workspace = true }
 solana-pubkey = { workspace = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 solana-system-interface = { workspace = true }
 thiserror = { workspace = true }

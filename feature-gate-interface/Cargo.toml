@@ -36,13 +36,15 @@ solana-instruction = { workspace = true, optional = true }
 solana-program-error = { workspace = true, optional = true }
 solana-pubkey = { workspace = true }
 solana-rent = { workspace = true, optional = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 solana-system-interface = { workspace = true, optional = true, features = [
     "bincode",
 ] }
 
 [dev-dependencies]
-solana-feature-gate-interface = { path = ".", features = ["dev-context-only-utils"] }
+solana-feature-gate-interface = { path = ".", features = [
+    "dev-context-only-utils",
+] }
 
 [lints]
 workspace = true

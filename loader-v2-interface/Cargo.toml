@@ -22,9 +22,12 @@ serde = ["dep:serde", "dep:serde_bytes", "dep:serde_derive"]
 serde = { workspace = true, optional = true }
 serde_bytes = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-instruction = { workspace = true, features = ["bincode", "std"], optional = true }
+solana-instruction = { workspace = true, features = [
+    "bincode",
+    "std",
+], optional = true }
 solana-pubkey = { workspace = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 
 [lints]
 workspace = true

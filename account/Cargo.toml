@@ -48,7 +48,7 @@ solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-instruction = { workspace = true }
 solana-logger = { workspace = true, optional = true }
 solana-pubkey = { workspace = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 solana-sysvar = { workspace = true, features = ["bincode"], optional = true }
 
 [dev-dependencies]

@@ -12,7 +12,7 @@ edition = { workspace = true }
 [dependencies]
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-sdk-ids = { workspace = true, optional = true }
+badchain-sdk-ids = { workspace = true, optional = true }
 solana-sdk-macro = { workspace = true }
 solana-sysvar-id = { workspace = true, optional = true }
 

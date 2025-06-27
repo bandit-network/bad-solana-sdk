@@ -84,7 +84,7 @@ solana-pubkey = { workspace = true, default-features = false, features = [
     "std",
 ] }
 solana-sanitize = { workspace = true }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }
 solana-seed-derivable = { workspace = true, optional = true }
 solana-seed-phrase = { workspace = true, optional = true }

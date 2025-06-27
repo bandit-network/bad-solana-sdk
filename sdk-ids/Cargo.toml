@@ -1,5 +1,5 @@
 [package]
-name = "solana-sdk-ids"
+name = "badchain-sdk-ids"
 description = "Solana SDK IDs"
 documentation = "https://docs.rs/solana-sdk-ids"
 version = "2.2.1"

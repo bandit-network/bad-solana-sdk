@@ -125,7 +125,6 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use badchain_raffle_649::Raffle;
-pub use solana_sdk_ids::sysvar::raffle_649::{check_id, id, ID};
 
 #[cfg(feature = "bincode")]
 impl Sysvar for Raffle {

@@ -275,7 +275,7 @@ solana-rent-debits = { path = "rent-debits", version = "2.2.1" }
 solana-reward-info = { path = "reward-info", version = "2.2.1" }
 solana-sanitize = { path = "sanitize", version = "2.2.1" }
 bad-solana-sdk = { path = "sdk", version = "2.2.1" }
-solana-sdk-ids = { path = "sdk-ids", version = "2.2.1" }
+badchain-sdk-ids = { path = "sdk-ids", version = "2.2.1" }
 solana-sdk-macro = { path = "sdk-macro", version = "2.2.1" }
 solana-secp256k1-program = { path = "secp256k1-program", version = "2.2.1" }
 solana-secp256k1-recover = { path = "secp256k1-recover", version = "2.2.1" }

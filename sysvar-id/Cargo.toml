@@ -16,7 +16,7 @@ rustdoc-args = ["--cfg=docsrs"]
 
 [dependencies]
 solana-pubkey = { workspace = true, default-features = false }
-solana-sdk-ids = { workspace = true }
+badchain-sdk-ids = { workspace = true }
 
 [lints]
 workspace = true
