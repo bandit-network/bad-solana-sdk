@@ -116,7 +116,7 @@ pub mod sysvar {
     }
 
     pub mod raffle_649 {
-        solana_pubkey::declare_id!("SysvarRaffle6491111111111111111111111111111");
+        solana_pubkey::declare_id!("SysvarRaff1e6491111111111111111111111111111");
     }
 }
 

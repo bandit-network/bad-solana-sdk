@@ -16,7 +16,7 @@ rustdoc-args = ["--cfg=docsrs"]
 
 [features]
 serde = ["dep:serde", "dep:serde_derive", "bv/serde"]
-sysvar = ["dep:solana-sdk-ids", "dep:solana-sysvar-id"]
+sysvar = ["dep:badchain-sdk-ids", "dep:solana-sysvar-id"]
 
 [dependencies]
 bv = { workspace = true }

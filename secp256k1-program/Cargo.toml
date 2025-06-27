@@ -18,7 +18,7 @@ rustdoc-args = ["--cfg=docsrs"]
 bincode = [
     "dep:bincode",
     "dep:solana-instruction",
-    "dep:solana-sdk-ids",
+    "dep:badchain-sdk-ids",
     "serde",
 ]
 dev-context-only-utils = ["bincode"]

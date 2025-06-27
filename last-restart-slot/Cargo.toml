@@ -18,7 +18,7 @@ solana-sysvar-id = { workspace = true, optional = true }
 
 [features]
 serde = ["dep:serde", "dep:serde_derive"]
-sysvar = ["dep:solana-sdk-ids", "dep:solana-sysvar-id"]
+sysvar = ["dep:badchain-sdk-ids", "dep:solana-sysvar-id"]
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]

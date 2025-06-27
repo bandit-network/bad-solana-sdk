@@ -14,7 +14,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 
 [features]
 serde = ["dep:serde", "dep:serde_derive", "solana-hash/serde"]
-sysvar = ["dep:solana-sdk-ids", "dep:solana-sysvar-id"]
+sysvar = ["dep:badchain-sdk-ids", "dep:solana-sysvar-id"]
 
 [dependencies]
 serde = { workspace = true, optional = true }
