@@ -22,7 +22,7 @@
 //! # use solana_rpc_client::rpc_client::RpcClient;
 //! # use solana_sdk::account::Account;
 //! # use solana_slot_history::SlotHistory;
-//! # use solana_sdk_ids::sysvar::slot_history;
+//! # use badchain_sdk_ids::sysvar::slot_history;
 //! # use anyhow::Result;
 //! #
 //! fn print_sysvar_slot_history(client: &RpcClient) -> Result<()> {
@@ -31,7 +31,7 @@
 //! #   client.set_get_account_response(slot_history::ID, Account {
 //! #       lamports: 913326000,
 //! #       data,
-//! #       owner: solana_sdk_ids::system_program::ID,
+//! #       owner: badchain_sdk_ids::system_program::ID,
 //! #       executable: false,
 //! #       rent_epoch: 307,
 //! #   });
@@ -53,7 +53,7 @@ use crate::Sysvar;
 pub use {
     solana_account_info::AccountInfo,
     solana_program_error::ProgramError,
-    solana_sdk_ids::sysvar::slot_history::{check_id, id, ID},
+    badchain_sdk_ids::sysvar::slot_history::{check_id, id, ID},
     solana_slot_history::SlotHistory,
 };
 

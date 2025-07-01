@@ -2,8 +2,8 @@
 use serde_derive::{Deserialize, Serialize};
 use {
     crate::{v0, AccountKeys},
+    badchain_sdk_ids::bpf_loader_upgradeable,
     solana_pubkey::Pubkey,
-    solana_sdk_ids::bpf_loader_upgradeable,
     std::{borrow::Cow, collections::HashSet},
 };
 
@@ -189,8 +189,8 @@ mod tests {
     use {
         super::*,
         crate::{compiled_instruction::CompiledInstruction, MessageHeader},
+        badchain_sdk_ids::{system_program, sysvar},
         itertools::Itertools,
-        solana_sdk_ids::{system_program, sysvar},
     };
 
     fn check_test_loaded_message() -> (LoadedMessage<'static>, [Pubkey; 6]) {

@@ -3,13 +3,13 @@
 #![cfg_attr(feature = "frozen-abi", feature(min_specialization))]
 
 use {
+    badchain_sdk_ids::incinerator,
     solana_account::{AccountSharedData, ReadableAccount, WritableAccount},
     solana_clock::Epoch,
     solana_epoch_schedule::EpochSchedule,
     solana_genesis_config::GenesisConfig,
     solana_pubkey::Pubkey,
     solana_rent::{Rent, RentDue},
-    solana_sdk_ids::incinerator,
 };
 
 #[cfg_attr(feature = "frozen-abi", derive(solana_frozen_abi_macro::AbiExample))]
@@ -219,7 +219,7 @@ impl std::ops::AddAssign for CollectedInfo {
 #[cfg(test)]
 mod tests {
     use {
-        super::*, assert_matches::assert_matches, solana_account::Account, solana_sdk_ids::sysvar,
+        super::*, assert_matches::assert_matches, badchain_sdk_ids::sysvar, solana_account::Account,
     };
 
     fn default_rent_collector_clone_with_epoch(epoch: Epoch) -> RentCollector {

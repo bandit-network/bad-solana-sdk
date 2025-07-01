@@ -22,7 +22,7 @@
 use crate::Sysvar;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-pub use solana_sdk_ids::sysvar::recent_blockhashes::{check_id, id, ID};
+pub use badchain_sdk_ids::sysvar::recent_blockhashes::{check_id, id, ID};
 use {
     solana_fee_calculator::FeeCalculator,
     solana_hash::Hash,

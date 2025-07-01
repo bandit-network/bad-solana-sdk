@@ -1,9 +1,9 @@
 //! The native loader native program.
 
+pub use badchain_sdk_ids::native_loader::{check_id, id, ID};
 use solana_account::{
     Account, AccountSharedData, InheritableAccountFields, DUMMY_INHERITABLE_ACCOUNT_FIELDS,
 };
-pub use solana_sdk_ids::native_loader::{check_id, id, ID};
 
 /// Create an executable account with the given shared object name.
 pub fn create_loadable_account_with_fields(

@@ -3,7 +3,7 @@
 use crate::Sysvar;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-pub use solana_sdk_ids::sysvar::rewards::{check_id, id, ID};
+pub use badchain_sdk_ids::sysvar::rewards::{check_id, id, ID};
 use solana_sysvar_id::impl_sysvar_id;
 
 impl_sysvar_id!(Rewards);

@@ -550,7 +550,7 @@ pub use {
 /// [np]: https://docs.solanalabs.com/runtime/programs#config-program
 pub mod config {
     pub mod program {
-        pub use solana_sdk_ids::config::{check_id, id, ID};
+        pub use badchain_sdk_ids::config::{check_id, id, ID};
     }
 }
 

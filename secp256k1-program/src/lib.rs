@@ -325,7 +325,7 @@
 //! use solana_account_info::{next_account_info, AccountInfo};
 //! use solana_msg::msg;
 //! use solana_program_error::{ProgramError, ProgramResult};
-//! use solana_sdk_ids::secp256k1_program;
+//! use badchain_sdk_ids::secp256k1_program;
 //! use solana_instructions_sysvar::load_instruction_at_checked;
 //!
 //! /// An Ethereum address corresponding to a secp256k1 secret key that is
@@ -347,7 +347,7 @@
 //!
 //!     // The instructions sysvar gives access to the instructions in the transaction.
 //!     let instructions_sysvar_account = next_account_info(account_info_iter)?;
-//!     assert!(solana_sdk_ids::sysvar::instructions::check_id(
+//!     assert!(badchain_sdk_ids::sysvar::instructions::check_id(
 //!         instructions_sysvar_account.key
 //!     ));
 //!
@@ -448,7 +448,7 @@
 //!         program_keypair.pubkey(),
 //!         &[],
 //!         vec![
-//!             AccountMeta::new_readonly(solana_sdk_ids::sysvar::instructions::ID, false)
+//!             AccountMeta::new_readonly(badchain_sdk_ids::sysvar::instructions::ID, false)
 //!         ],
 //!     );
 //!
@@ -541,7 +541,7 @@
 //! use solana_account_info::{next_account_info, AccountInfo};
 //! use solana_program_error::{ProgramError, ProgramResult};
 //! use solana_msg::msg;
-//! use solana_sdk_ids::secp256k1_program;
+//! use badchain_sdk_ids::secp256k1_program;
 //! use solana_instructions_sysvar::{get_instruction_relative, load_instruction_at_checked};
 //!
 //! /// A struct to hold the values specified in the `SecpSignatureOffsets` struct.
@@ -607,7 +607,7 @@
 //!     let account_info_iter = &mut accounts.iter();
 //!
 //!     let instructions_sysvar_account = next_account_info(account_info_iter)?;
-//!     assert!(solana_sdk_ids::sysvar::instructions::check_id(
+//!     assert!(badchain_sdk_ids::sysvar::instructions::check_id(
 //!         instructions_sysvar_account.key
 //!     ));
 //!
@@ -757,7 +757,7 @@
 //!
 //!     let secp256k1_instr_data = make_secp256k1_instruction_data(&signatures, 0)?;
 //!     let secp256k1_instr = Instruction::new_with_bytes(
-//!         solana_sdk_ids::secp256k1_program::ID,
+//!         badchain_sdk_ids::secp256k1_program::ID,
 //!         &secp256k1_instr_data,
 //!         vec![],
 //!     );
@@ -766,7 +766,7 @@
 //!         program_keypair.pubkey(),
 //!         &[],
 //!         vec![
-//!             AccountMeta::new_readonly(solana_sdk_ids::sysvar::instructions::ID, false)
+//!             AccountMeta::new_readonly(badchain_sdk_ids::sysvar::instructions::ID, false)
 //!         ],
 //!     );
 //!
@@ -884,7 +884,7 @@ pub fn new_secp256k1_instruction_with_signature(
     bincode::serialize_into(writer, &offsets).unwrap();
 
     Instruction {
-        program_id: solana_sdk_ids::secp256k1_program::id(),
+        program_id: badchain_sdk_ids::secp256k1_program::id(),
         accounts: vec![],
         data: instruction_data,
     }

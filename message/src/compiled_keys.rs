@@ -5,7 +5,7 @@ use crate::{
 };
 use {
     crate::MessageHeader, core::fmt, solana_instruction::Instruction, solana_pubkey::Pubkey,
-    solana_sdk_ids::system_program, std::collections::BTreeMap,
+    badchain_sdk_ids::system_program, std::collections::BTreeMap,
 };
 
 /// A helper struct to collect pubkeys compiled for a set of instructions
@@ -226,7 +226,7 @@ mod tests {
         super::*,
         bitflags::bitflags,
         solana_instruction::AccountMeta,
-        solana_sdk_ids::sysvar::recent_blockhashes,
+        badchain_sdk_ids::sysvar::recent_blockhashes,
         solana_system_interface::instruction::{advance_nonce_account, SystemInstruction},
     };
 

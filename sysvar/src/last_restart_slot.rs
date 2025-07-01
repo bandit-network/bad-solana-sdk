@@ -39,8 +39,8 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
+    badchain_sdk_ids::sysvar::last_restart_slot::{check_id, id, ID},
     solana_last_restart_slot::LastRestartSlot,
-    solana_sdk_ids::sysvar::last_restart_slot::{check_id, id, ID},
 };
 
 #[cfg(feature = "bincode")]

@@ -23,7 +23,7 @@
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
 //! # use solana_rent::Rent;
-//! # use solana_sdk_ids::sysvar::rent;
+//! # use badchain_sdk_ids::sysvar::rent;
 //! fn process_instruction(
 //!     program_id: &Pubkey,
 //!     accounts: &[AccountInfo],
@@ -59,7 +59,7 @@
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
 //! # use solana_rent::Rent;
-//! # use solana_sdk_ids::sysvar::rent;
+//! # use badchain_sdk_ids::sysvar::rent;
 //! #
 //! fn process_instruction(
 //!     program_id: &Pubkey,
@@ -99,14 +99,14 @@
 //! # use solana_sdk::account::Account;
 //! # use solana_rent::Rent;
 //! # use solana_rpc_client::rpc_client::RpcClient;
-//! # use solana_sdk_ids::sysvar::rent;
+//! # use badchain_sdk_ids::sysvar::rent;
 //! # use anyhow::Result;
 //! #
 //! fn print_sysvar_rent(client: &RpcClient) -> Result<()> {
 //! #   client.set_get_account_response(rent::ID, Account {
 //! #       lamports: 1009200,
 //! #       data: vec![152, 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 64, 100],
-//! #       owner: solana_sdk_ids::system_program::ID,
+//! #       owner: badchain_sdk_ids::system_program::ID,
 //! #       executable: false,
 //! #       rent_epoch: 307,
 //! # });
@@ -126,7 +126,7 @@
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
     solana_rent::Rent,
-    solana_sdk_ids::sysvar::rent::{check_id, id, ID},
+    badchain_sdk_ids::sysvar::rent::{check_id, id, ID},
 };
 
 #[cfg(feature = "bincode")]

@@ -9,8 +9,8 @@
 //! This property can be problematic for developers who assume each signature is unique. Without enforcing
 //! low-S values, the same message and key can produce two different valid signatures, potentially breaking
 //! replay protection schemes that rely on signature uniqueness.
+pub use badchain_sdk_ids::secp256r1_program::{check_id, id, ID};
 use bytemuck::{Pod, Zeroable};
-pub use solana_sdk_ids::secp256r1_program::{check_id, id, ID};
 
 #[derive(Default, Debug, Copy, Clone, Zeroable, Pod, Eq, PartialEq)]
 #[repr(C)]

@@ -11,7 +11,7 @@
 //! 2. When the next epoch is entered the runtime will check for new activation requests and
 //!    active them.  When this occurs, the activation slot is recorded in the feature account
 
-pub use solana_sdk_ids::feature::{check_id, id, ID};
+pub use badchain_sdk_ids::feature::{check_id, id, ID};
 #[cfg(feature = "bincode")]
 use {
     solana_account::{AccountSharedData, ReadableAccount, WritableAccount},

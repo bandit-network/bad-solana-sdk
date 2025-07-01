@@ -22,14 +22,14 @@
 //! # use solana_program::stake_history::StakeHistory;
 //! # use solana_sdk::account::Account;
 //! # use solana_rpc_client::rpc_client::RpcClient;
-//! # use solana_sdk_ids::sysvar::stake_history;
+//! # use badchain_sdk_ids::sysvar::stake_history;
 //! # use anyhow::Result;
 //! #
 //! fn print_sysvar_stake_history(client: &RpcClient) -> Result<()> {
 //! #   client.set_get_account_response(stake_history::ID, Account {
 //! #       lamports: 114979200,
 //! #       data: vec![0, 0, 0, 0, 0, 0, 0, 0],
-//! #       owner: solana_sdk_ids::system_program::ID,
+//! #       owner: badchain_sdk_ids::system_program::ID,
 //! #       executable: false,
 //! #       rent_epoch: 307,
 //! #   });
@@ -48,7 +48,7 @@
 
 #[cfg(feature = "bincode")]
 use crate::Sysvar;
-pub use solana_sdk_ids::sysvar::stake_history::{check_id, id, ID};
+pub use badchain_sdk_ids::sysvar::stake_history::{check_id, id, ID};
 #[deprecated(
     since = "2.2.0",
     note = "Use solana_stake_interface::stake_history instead"

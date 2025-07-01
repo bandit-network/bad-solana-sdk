@@ -3,9 +3,9 @@
 
 #[cfg(feature = "bincode")]
 use {
+    badchain_sdk_ids::sysvar::rent,
     solana_instruction::{AccountMeta, Instruction},
     solana_pubkey::Pubkey,
-    solana_sdk_ids::sysvar::rent,
 };
 
 #[cfg_attr(

@@ -71,7 +71,7 @@
 //!
 //! All sysvar accounts are owned by the account identified by [`sysvar::ID`].
 //!
-//! [`sysvar::ID`]: https://docs.rs/solana-sdk-ids/latest/solana_sdk_ids/sysvar/constant.ID.html
+//! [`sysvar::ID`]: https://docs.rs/solana-sdk-ids/latest/badchain_sdk_ids/sysvar/constant.ID.html
 //!
 //! For more details see the Solana [documentation on sysvars][sysvardoc].
 //!
@@ -132,7 +132,7 @@ mod sysvar_ids {
             slot_hashes::id(),
             slot_history::id(),
             stake_history::id(),
-            solana_sdk_ids::sysvar::instructions::id(),
+            badchain_sdk_ids::sysvar::instructions::id(),
         ];
     }
 }

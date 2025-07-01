@@ -10,5 +10,5 @@ pub mod instruction;
 pub mod state;
 
 pub mod program {
-    pub use solana_sdk_ids::vote::{check_id, id, ID};
+    pub use badchain_sdk_ids::vote::{check_id, id, ID};
 }

@@ -30,9 +30,9 @@
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 #![allow(clippy::arithmetic_side_effects)]
 
+pub use badchain_sdk_ids::sysvar::instructions::{check_id, id, ID};
 #[cfg(feature = "dev-context-only-utils")]
 use qualifier_attr::qualifiers;
-pub use solana_sdk_ids::sysvar::instructions::{check_id, id, ID};
 #[cfg(not(target_os = "solana"))]
 use {
     bitflags::bitflags,
@@ -292,12 +292,12 @@ pub fn get_instruction_relative(
 mod tests {
     use {
         super::*,
+        badchain_sdk_ids::sysvar::instructions::id,
         solana_account_info::AccountInfo,
         solana_instruction::{AccountMeta, BorrowedAccountMeta, BorrowedInstruction, Instruction},
         solana_program_error::ProgramError,
         solana_pubkey::Pubkey,
         solana_sanitize::SanitizeError,
-        solana_sdk_ids::sysvar::instructions::id,
     };
 
     #[test]
@@ -387,7 +387,7 @@ mod tests {
         let key = id();
         let mut lamports = 0;
         let mut data = construct_instructions_data(&[borrowed_instruction0, borrowed_instruction1]);
-        let owner = solana_sdk_ids::sysvar::id();
+        let owner = badchain_sdk_ids::sysvar::id();
         let mut account_info = AccountInfo::new(
             &key,
             false,
@@ -446,7 +446,7 @@ mod tests {
         let mut data = construct_instructions_data(&[borrowed_instruction0, borrowed_instruction1]);
         let res = store_current_index_checked(&mut data, 1);
         assert!(res.is_ok());
-        let owner = solana_sdk_ids::sysvar::id();
+        let owner = badchain_sdk_ids::sysvar::id();
         let mut account_info = AccountInfo::new(
             &key,
             false,
@@ -516,7 +516,7 @@ mod tests {
         ]);
         let res = store_current_index_checked(&mut data, 1);
         assert!(res.is_ok());
-        let owner = solana_sdk_ids::sysvar::id();
+        let owner = badchain_sdk_ids::sysvar::id();
         let mut account_info = AccountInfo::new(
             &key,
             false,
