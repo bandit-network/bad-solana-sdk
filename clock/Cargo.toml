@@ -16,14 +16,14 @@ rustdoc-args = ["--cfg=docsrs"]
 
 [features]
 serde = ["dep:serde", "dep:serde_derive"]
-sysvar = ["dep:badchain-sdk-ids", "dep:solana-sysvar-id"]
+sysvar = ["dep:badchain-sdk-ids", "dep:badchain-sysvar-id"]
 
 [dependencies]
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 badchain-sdk-ids = { workspace = true, optional = true }
 solana-sdk-macro = { workspace = true }
-solana-sysvar-id = { workspace = true, optional = true }
+badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
 solana-clock = { path = ".", features = ["sysvar"] }

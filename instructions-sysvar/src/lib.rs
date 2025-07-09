@@ -59,7 +59,7 @@ use {
 /// Use the free functions in this module to access the instructions sysvar.
 pub struct Instructions();
 
-solana_sysvar_id::impl_sysvar_id!(Instructions);
+badchain_sysvar_id::impl_sysvar_id!(Instructions);
 
 /// Construct the account data for the instructions sysvar.
 ///

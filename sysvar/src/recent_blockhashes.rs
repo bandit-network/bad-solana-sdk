@@ -20,13 +20,13 @@
 #![allow(clippy::arithmetic_side_effects)]
 #[cfg(feature = "bincode")]
 use crate::Sysvar;
+pub use badchain_sdk_ids::sysvar::recent_blockhashes::{check_id, id, ID};
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-pub use badchain_sdk_ids::sysvar::recent_blockhashes::{check_id, id, ID};
 use {
+    badchain_sysvar_id::impl_sysvar_id,
     solana_fee_calculator::FeeCalculator,
     solana_hash::Hash,
-    solana_sysvar_id::impl_sysvar_id,
     std::{cmp::Ordering, collections::BinaryHeap, iter::FromIterator, ops::Deref},
 };
 

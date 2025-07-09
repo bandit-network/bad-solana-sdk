@@ -62,7 +62,7 @@ pub fn get_processed_sibling_instruction(index: usize) -> Option<Instruction> {
     #[cfg(not(target_os = "solana"))]
     {
         core::hint::black_box(index);
-        // Same value used in `solana_sysvar::program_stubs`.
+        // Same value used in `badchain_sysvar::program_stubs`.
         None
     }
 }
@@ -80,6 +80,6 @@ pub fn get_stack_height() -> usize {
     }
 
     #[cfg(not(target_os = "solana"))]
-    // Same value used in `solana_sysvar::program_stubs`.
+    // Same value used in `badchain_sysvar::program_stubs`.
     0
 }

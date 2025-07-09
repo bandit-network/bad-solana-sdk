@@ -23,7 +23,7 @@ frozen-abi = [
 ]
 serde = ["dep:serde", "dep:serde_derive", "solana-hash/serde"]
 std = []
-sysvar = ["dep:solana-sysvar-id"]
+sysvar = ["dep:badchain-sysvar-id"]
 
 [dependencies]
 serde = { workspace = true, optional = true }
@@ -33,7 +33,7 @@ solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-hash = { workspace = true, default-features = false }
 badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }
-solana-sysvar-id = { workspace = true, optional = true }
+badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
 solana-epoch-rewards = { path = ".", features = ["sysvar"] }

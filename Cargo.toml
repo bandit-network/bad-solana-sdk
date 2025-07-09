@@ -298,8 +298,8 @@ solana-stable-layout = { path = "stable-layout", version = "2.2.1" }
 solana-stake-interface = { version = "1.2.1" }
 solana-system-interface = "1.0"
 solana-system-transaction = { path = "system-transaction", version = "2.2.1" }
-solana-sysvar = { path = "sysvar", version = "2.2.1" }
-solana-sysvar-id = { path = "sysvar-id", version = "2.2.1" }
+badchain-sysvar = { path = "sysvar", version = "2.2.1" }
+badchain-sysvar-id = { path = "sysvar-id", version = "2.2.1" }
 solana-time-utils = { path = "time-utils", version = "2.2.1" }
 solana-transaction = { path = "transaction", version = "2.2.1" }
 solana-transaction-error = { path = "transaction-error", version = "2.2.1" }
@@ -363,4 +363,4 @@ solana-program-error = { path = "program-error" }
 solana-pubkey = { path = "pubkey" }
 solana-rent = { path = "rent" }
 solana-signature = { path = "signature" }
-solana-sysvar-id = { path = "sysvar-id" }
+badchain-sysvar-id = { path = "sysvar-id" }

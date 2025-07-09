@@ -21,7 +21,7 @@
 //! # use solana_msg::msg;
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
-//! # use solana_sysvar::Sysvar;
+//! # use badchain_sysvar::Sysvar;
 //! #
 //! fn process_instruction(
 //!     program_id: &Pubkey,

@@ -23,13 +23,13 @@ use {
     crate::{
         compiled_instruction::CompiledInstruction, compiled_keys::CompiledKeys, MessageHeader,
     },
+    badchain_sdk_ids::{
+        bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, system_program, sysvar,
+    },
     solana_hash::Hash,
     solana_instruction::Instruction,
     solana_pubkey::Pubkey,
     solana_sanitize::{Sanitize, SanitizeError},
-    badchain_sdk_ids::{
-        bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, system_program, sysvar,
-    },
     std::{collections::HashSet, convert::TryFrom, str::FromStr},
 };
 
@@ -1023,7 +1023,7 @@ mod tests {
 
     #[test]
     fn test_inline_all_ids() {
-        assert_eq!(solana_sysvar::ALL_IDS.to_vec(), ALL_IDS.to_vec());
+        assert_eq!(badchain_sysvar::ALL_IDS.to_vec(), ALL_IDS.to_vec());
     }
 
     #[test]

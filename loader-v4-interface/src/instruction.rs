@@ -291,7 +291,7 @@ pub fn finalize(
 
 #[cfg(test)]
 mod tests {
-    use {super::*, solana_sdk_ids::system_program};
+    use {super::*, badchain_sdk_ids::system_program};
 
     #[test]
     fn test_create_buffer_instruction() {

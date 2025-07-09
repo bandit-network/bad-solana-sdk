@@ -47,15 +47,15 @@
 //! ```
 
 #[cfg(feature = "bincode")]
-use crate::Sysvar;
+use crate::{
+    bad_stake_history::{StakeHistory, StakeHistoryEntry, StakeHistoryGetEntry, MAX_ENTRIES},
+    Sysvar,
+};
 pub use badchain_sdk_ids::sysvar::stake_history::{check_id, id, ID};
 #[deprecated(
     since = "2.2.0",
     note = "Use solana_stake_interface::stake_history instead"
 )]
-pub use solana_stake_interface::stake_history::{
-    StakeHistory, StakeHistoryEntry, StakeHistoryGetEntry, MAX_ENTRIES,
-};
 use {crate::get_sysvar, solana_clock::Epoch};
 
 #[cfg(feature = "bincode")]

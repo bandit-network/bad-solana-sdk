@@ -2,14 +2,14 @@
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 //! The Solana [`Account`] type.
 
+#[cfg(feature = "bincode")]
+use badchain_sysvar::Sysvar;
 #[cfg(feature = "dev-context-only-utils")]
 use qualifier_attr::qualifiers;
 #[cfg(feature = "serde")]
 use serde::ser::{Serialize, Serializer};
 #[cfg(feature = "frozen-abi")]
 use solana_frozen_abi_macro::{frozen_abi, AbiExample};
-#[cfg(feature = "bincode")]
-use solana_sysvar::Sysvar;
 use {
     badchain_sdk_ids::{bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, loader_v4},
     solana_account_info::{debug_account_data::*, AccountInfo},

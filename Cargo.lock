@@ -314,13 +314,13 @@ name = "badchain-bad-addresses"
 version = "0.0.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "rand 0.8.5",
  "serde",
  "serde_derive",
  "solana-hash",
  "solana-pubkey",
  "solana-sha256-hasher",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -328,11 +328,11 @@ name = "badchain-raffle-649"
 version = "0.0.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-clock",
  "solana-sdk-macro",
- "solana-sysvar-id",
  "static_assertions",
 ]
 
@@ -340,6 +340,62 @@ dependencies = [
 name = "badchain-sdk-ids"
 version = "2.2.1"
 dependencies = [
+ "solana-pubkey",
+]
+
+[[package]]
+name = "badchain-sysvar"
+version = "2.2.1"
+dependencies = [
+ "anyhow",
+ "bad-solana-sdk",
+ "badchain-bad-addresses",
+ "badchain-raffle-649",
+ "badchain-sdk-ids",
+ "badchain-sysvar",
+ "badchain-sysvar-id",
+ "base64 0.22.1",
+ "bincode",
+ "bytemuck",
+ "bytemuck_derive",
+ "lazy_static",
+ "rand 0.8.5",
+ "serde",
+ "serde_derive",
+ "serial_test",
+ "solana-account-info",
+ "solana-clock",
+ "solana-define-syscall",
+ "solana-epoch-rewards",
+ "solana-epoch-schedule",
+ "solana-fee-calculator",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-hash",
+ "solana-instruction",
+ "solana-instructions-sysvar",
+ "solana-last-restart-slot",
+ "solana-msg",
+ "solana-program",
+ "solana-program-entrypoint",
+ "solana-program-error",
+ "solana-program-memory",
+ "solana-pubkey",
+ "solana-rent",
+ "solana-sanitize",
+ "solana-sdk-macro",
+ "solana-sha256-hasher",
+ "solana-slot-hashes",
+ "solana-slot-history",
+ "solana-stake-interface",
+ "test-case",
+]
+
+[[package]]
+name = "badchain-sysvar-id"
+version = "2.2.1"
+dependencies = [
+ "badchain-sdk-ids",
  "solana-pubkey",
 ]
 
@@ -2817,6 +2873,7 @@ name = "solana-account"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar",
  "bincode",
  "qualifier_attr",
  "serde",
@@ -2830,7 +2887,6 @@ dependencies = [
  "solana-instruction",
  "solana-logger",
  "solana-pubkey",
- "solana-sysvar",
 ]
 
 [[package]]
@@ -2987,11 +3043,11 @@ name = "solana-clock"
 version = "2.2.2"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-clock",
  "solana-sdk-macro",
- "solana-sysvar-id",
  "static_assertions",
 ]
 
@@ -3089,6 +3145,7 @@ name = "solana-epoch-rewards"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-epoch-rewards",
@@ -3096,7 +3153,6 @@ dependencies = [
  "solana-frozen-abi-macro",
  "solana-hash",
  "solana-sdk-macro",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -3113,6 +3169,7 @@ name = "solana-epoch-schedule"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-clock",
@@ -3120,7 +3177,6 @@ dependencies = [
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-sdk-macro",
- "solana-sysvar-id",
  "static_assertions",
 ]
 
@@ -3322,6 +3378,7 @@ name = "solana-instructions-sysvar"
 version = "2.2.2"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "bitflags 2.8.0",
  "qualifier_attr",
  "solana-account-info",
@@ -3330,7 +3387,6 @@ dependencies = [
  "solana-pubkey",
  "solana-sanitize",
  "solana-serialize-utils",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -3373,10 +3429,10 @@ name = "solana-last-restart-slot"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-sdk-macro",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -3442,6 +3498,7 @@ version = "2.4.0"
 dependencies = [
  "anyhow",
  "badchain-sdk-ids",
+ "badchain-sysvar",
  "bincode",
  "bitflags 2.8.0",
  "blake3",
@@ -3465,7 +3522,6 @@ dependencies = [
  "solana-sha256-hasher",
  "solana-short-vec",
  "solana-system-interface",
- "solana-sysvar",
  "solana-transaction-error",
  "static_assertions",
  "wasm-bindgen",
@@ -3594,6 +3650,8 @@ version = "2.3.0"
 dependencies = [
  "arbitrary",
  "badchain-sdk-ids",
+ "badchain-sysvar",
+ "badchain-sysvar-id",
  "bincode",
  "blake3",
  "borsh 0.10.4",
@@ -3645,8 +3703,6 @@ dependencies = [
  "solana-slot-hashes",
  "solana-slot-history",
  "solana-stable-layout",
- "solana-sysvar",
- "solana-sysvar-id",
  "thiserror 2.0.12",
 ]
 
@@ -3738,13 +3794,13 @@ name = "solana-rent"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-sdk-macro",
- "solana-sysvar-id",
  "static_assertions",
 ]
 
@@ -3788,6 +3844,15 @@ dependencies = [
 [[package]]
 name = "solana-sanitize"
 version = "2.2.1"
+
+[[package]]
+name = "solana-sdk-ids"
+version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5c5d8b9cc68d5c88b062a33e23a6466722467dde0035152d8fb1afbcdf350a5f"
+dependencies = [
+ "solana-pubkey",
+]
 
 [[package]]
 name = "solana-sdk-macro"
@@ -3967,11 +4032,11 @@ name = "solana-slot-hashes"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "serde",
  "serde_derive",
  "solana-hash",
  "solana-sha256-hasher",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -3979,10 +4044,10 @@ name = "solana-slot-history"
 version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
+ "badchain-sysvar-id",
  "bv",
  "serde",
  "serde_derive",
- "solana-sysvar-id",
 ]
 
 [[package]]
@@ -4045,59 +4110,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "solana-sysvar"
-version = "2.2.2"
-dependencies = [
- "anyhow",
- "bad-solana-sdk",
- "badchain-bad-addresses",
- "badchain-raffle-649",
- "badchain-sdk-ids",
- "base64 0.22.1",
- "bincode",
- "bytemuck",
- "bytemuck_derive",
- "lazy_static",
- "rand 0.8.5",
- "serde",
- "serde_derive",
- "serial_test",
- "solana-account-info",
- "solana-clock",
- "solana-define-syscall",
- "solana-epoch-rewards",
- "solana-epoch-schedule",
- "solana-fee-calculator",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
- "solana-hash",
- "solana-instruction",
- "solana-instructions-sysvar",
- "solana-last-restart-slot",
- "solana-msg",
- "solana-program",
- "solana-program-entrypoint",
- "solana-program-error",
- "solana-program-memory",
- "solana-pubkey",
- "solana-rent",
- "solana-sanitize",
- "solana-sdk-macro",
- "solana-sha256-hasher",
- "solana-slot-hashes",
- "solana-slot-history",
- "solana-stake-interface",
- "solana-sysvar",
- "solana-sysvar-id",
- "test-case",
-]
-
-[[package]]
 name = "solana-sysvar-id"
 version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5762b273d3325b047cfda250787f8d796d781746860d5d0a746ee29f3e8812c1"
 dependencies = [
- "badchain-sdk-ids",
  "solana-pubkey",
+ "solana-sdk-ids",
 ]
 
 [[package]]

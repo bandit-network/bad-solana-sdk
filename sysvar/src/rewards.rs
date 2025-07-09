@@ -1,10 +1,10 @@
 //! This sysvar is deprecated and unused.
 #[cfg(feature = "bincode")]
 use crate::Sysvar;
+pub use badchain_sdk_ids::sysvar::rewards::{check_id, id, ID};
+use badchain_sysvar_id::impl_sysvar_id;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-pub use badchain_sdk_ids::sysvar::rewards::{check_id, id, ID};
-use solana_sysvar_id::impl_sysvar_id;
 
 impl_sysvar_id!(Rewards);
 

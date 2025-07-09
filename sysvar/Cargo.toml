@@ -1,8 +1,8 @@
 [package]
-name = "solana-sysvar"
+name = "badchain-sysvar"
 description = "Solana sysvar account types"
 documentation = "https://docs.rs/solana-sysvar"
-version = "2.2.2"
+version = "2.2.1"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
@@ -71,7 +71,7 @@ solana-sdk-macro = { workspace = true }
 solana-slot-hashes = { workspace = true, features = ["sysvar"] }
 solana-slot-history = { workspace = true, features = ["sysvar"] }
 solana-stake-interface = { workspace = true }
-solana-sysvar-id = { workspace = true }
+badchain-sysvar-id = { workspace = true }
 badchain-bad-addresses = { workspace = true, features = ["sysvar"] }
 badchain-raffle-649 = { workspace = true, features = ["sysvar"] }
 rand = { workspace = true }
@@ -90,7 +90,7 @@ solana-msg = { workspace = true }
 solana-program = { path = "../program" }
 bad-solana-sdk = { path = "../sdk" }
 solana-sha256-hasher = { workspace = true }
-solana-sysvar = { path = ".", features = ["dev-context-only-utils"] }
+badchain-sysvar = { path = ".", features = ["dev-context-only-utils"] }
 test-case = { workspace = true }
 
 [lints]

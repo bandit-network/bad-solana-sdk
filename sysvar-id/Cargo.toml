@@ -1,5 +1,5 @@
 [package]
-name = "solana-sysvar-id"
+name = "badchain-sysvar-id"
 description = "Definition for the sysvar id trait and associated macros."
 documentation = "https://docs.rs/solana-sysvar-id"
 version = "2.2.1"

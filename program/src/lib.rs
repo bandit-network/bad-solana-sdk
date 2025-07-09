@@ -496,6 +496,8 @@ pub mod slot_history;
 pub mod syscalls;
 pub mod sysvar;
 
+#[cfg(not(target_os = "solana"))]
+pub use badchain_sysvar::program_stubs;
 #[deprecated(since = "2.2.0", note = "Use `solana-big-mod-exp` crate instead")]
 pub use solana_big_mod_exp as big_mod_exp;
 #[deprecated(since = "2.2.0", note = "Use `solana-blake3-hasher` crate instead")]
@@ -531,9 +533,8 @@ pub use solana_serialize_utils as serialize_utils;
 pub use solana_short_vec as short_vec;
 #[deprecated(since = "2.1.0", note = "Use `solana-stable-layout` crate instead")]
 pub use solana_stable_layout as stable_layout;
-#[cfg(not(target_os = "solana"))]
-pub use solana_sysvar::program_stubs;
 pub use {
+    badchain_sysvar::impl_sysvar_get,
     solana_account_info::{self as account_info, debug_account_data},
     solana_clock as clock,
     solana_msg::msg,
@@ -543,7 +544,6 @@ pub use {
         entrypoint_no_alloc,
     },
     solana_program_option as program_option, solana_pubkey as pubkey, solana_rent as rent,
-    solana_sysvar::impl_sysvar_get,
 };
 /// The [config native program][np].
 ///
@@ -554,9 +554,9 @@ pub mod config {
     }
 }
 
-pub use solana_pubkey::{declare_deprecated_id, declare_id, pubkey};
 #[deprecated(since = "2.1.0", note = "Use `solana-sysvar-id` crate instead")]
-pub use solana_sysvar_id::{declare_deprecated_sysvar_id, declare_sysvar_id};
+pub use badchain_sysvar_id::{declare_deprecated_sysvar_id, declare_sysvar_id};
+pub use solana_pubkey::{declare_deprecated_id, declare_id, pubkey};
 
 /// Convenience macro for doing integer division where the operation's safety
 /// can be checked at compile-time.

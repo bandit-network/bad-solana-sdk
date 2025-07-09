@@ -93,11 +93,12 @@ use solana_pubkey::Pubkey;
 pub use sysvar_ids::ALL_IDS;
 #[cfg(feature = "bincode")]
 use {
-    solana_account_info::AccountInfo, solana_program_error::ProgramError,
-    solana_sysvar_id::SysvarId,
+    badchain_sysvar_id::SysvarId, solana_account_info::AccountInfo,
+    solana_program_error::ProgramError,
 };
 
 pub mod bad_addresses;
+pub mod bad_stake_history;
 pub mod clock;
 pub mod epoch_rewards;
 pub mod epoch_schedule;
@@ -264,7 +265,7 @@ mod tests {
         something: Pubkey,
     }
     solana_pubkey::declare_id!("TestSysvar111111111111111111111111111111111");
-    impl solana_sysvar_id::SysvarId for TestSysvar {
+    impl badchain_sysvar_id::SysvarId for TestSysvar {
         fn id() -> solana_pubkey::Pubkey {
             id()
         }

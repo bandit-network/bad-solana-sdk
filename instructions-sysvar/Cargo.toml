@@ -26,7 +26,7 @@ solana-pubkey = { workspace = true, default-features = false }
 solana-sanitize = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-serialize-utils = { workspace = true }
-solana-sysvar-id = { workspace = true }
+badchain-sysvar-id = { workspace = true }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]
 bitflags = { workspace = true }

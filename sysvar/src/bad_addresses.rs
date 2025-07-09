@@ -63,7 +63,7 @@ const SYSVAR_LEN: usize = 16_392; // golden, update if MAX_ENTRIES changes
 pub use {
     badchain_bad_addresses::BadAddresses,
     badchain_sdk_ids::sysvar::bad_addresses::{check_id, id, ID},
-    solana_sysvar_id::SysvarId,
+    badchain_sysvar_id::SysvarId,
 };
 
 #[cfg(feature = "bincode")]
