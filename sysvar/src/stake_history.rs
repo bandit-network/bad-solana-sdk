@@ -46,11 +46,12 @@
 //! # Ok::<(), anyhow::Error>(())
 //! ```
 
+// Always import the vendored types so they're in scope for both cfg blocks
+use crate::bad_stake_history::{StakeHistoryEntry, StakeHistoryGetEntry, MAX_ENTRIES};
+
 #[cfg(feature = "bincode")]
-use crate::{
-    bad_stake_history::{StakeHistory, StakeHistoryEntry, StakeHistoryGetEntry, MAX_ENTRIES},
-    Sysvar,
-};
+use crate::{bad_stake_history::StakeHistory, Sysvar};
+
 pub use badchain_sdk_ids::sysvar::stake_history::{check_id, id, ID};
 #[deprecated(
     since = "2.2.0",
