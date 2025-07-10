@@ -1,6 +1,6 @@
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-use {badchain_sdk_ids::address_lookup_table::id, solana_clock::Slot, solana_pubkey::Pubkey};
+use {badchain_clock::Slot, badchain_sdk_ids::address_lookup_table::id, solana_pubkey::Pubkey};
 #[cfg(feature = "bincode")]
 use {
     badchain_sdk_ids::system_program,

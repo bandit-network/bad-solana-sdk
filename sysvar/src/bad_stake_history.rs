@@ -2,7 +2,7 @@
 //!
 //! [sv]: https://docs.solanalabs.com/runtime/sysvars#stakehistory
 
-pub use solana_clock::Epoch;
+pub use badchain_clock::Epoch;
 use {badchain_sysvar_id::declare_sysvar_id, std::ops::Deref};
 
 pub const MAX_ENTRIES: usize = 512; // it should never take as many as 512 epochs to warm up or cool down

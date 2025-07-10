@@ -123,7 +123,7 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
-    solana_epoch_schedule::EpochSchedule,
+    badchain_epoch_schedule::EpochSchedule,
     badchain_sdk_ids::sysvar::epoch_schedule::{check_id, id, ID},
 };
 

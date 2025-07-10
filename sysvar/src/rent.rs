@@ -125,7 +125,7 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
-    solana_rent::Rent,
+    badchain_rent::Rent,
     badchain_sdk_ids::sysvar::rent::{check_id, id, ID},
 };
 

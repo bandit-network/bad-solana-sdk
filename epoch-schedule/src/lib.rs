@@ -11,7 +11,7 @@
 //! the chain there is a "warmup" period, where epochs are short, with subsequent
 //! epochs increasing in slots until they last for [`DEFAULT_SLOTS_PER_EPOCH`].
 //!
-//! [`DEFAULT_SLOTS_PER_EPOCH`]: https://docs.rs/solana-clock/latest/solana_clock/constant.DEFAULT_SLOTS_PER_EPOCH.html
+//! [`DEFAULT_SLOTS_PER_EPOCH`]: https://docs.rs/solana-clock/latest/badchain_clock/constant.DEFAULT_SLOTS_PER_EPOCH.html
 #![cfg_attr(feature = "frozen-abi", feature(min_specialization))]
 #![no_std]
 #[cfg(feature = "frozen-abi")]
@@ -24,12 +24,12 @@ pub mod sysvar;
 use serde_derive::{Deserialize, Serialize};
 use solana_sdk_macro::CloneZeroed;
 
-// inlined to avoid solana_clock dep
+// inlined to avoid badchain_clock dep
 const DEFAULT_SLOTS_PER_EPOCH: u64 = 432_000;
 #[cfg(test)]
 static_assertions::const_assert_eq!(
     DEFAULT_SLOTS_PER_EPOCH,
-    solana_clock::DEFAULT_SLOTS_PER_EPOCH
+    badchain_clock::DEFAULT_SLOTS_PER_EPOCH
 );
 /// The default number of slots before an epoch starts to calculate the leader schedule.
 pub const DEFAULT_LEADER_SCHEDULE_SLOT_OFFSET: u64 = DEFAULT_SLOTS_PER_EPOCH;

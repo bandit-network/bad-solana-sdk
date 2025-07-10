@@ -20,13 +20,13 @@ serde = [
     "dep:serde",
     "dep:serde_derive",
     "solana-account/serde",
-    "solana-clock/serde",
+    "badchain-clock/serde",
     "solana-cluster-type/serde",
-    "solana-epoch-schedule/serde",
+    "badchain-epoch-schedule/serde",
     "solana-fee-calculator/serde",
     "solana-inflation/serde",
     "solana-poh-config/serde",
-    "solana-rent/serde",
+    "badchain-rent/serde",
 ]
 
 [dependencies]
@@ -36,9 +36,9 @@ memmap2 = { workspace = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-account = { workspace = true }
-solana-clock = { workspace = true }
+badchain-clock = { workspace = true }
 solana-cluster-type = { workspace = true }
-solana-epoch-schedule = { workspace = true }
+badchain-epoch-schedule = { workspace = true }
 solana-fee-calculator = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
@@ -48,7 +48,7 @@ solana-keypair = { workspace = true }
 solana-logger = { workspace = true }
 solana-poh-config = { workspace = true }
 solana-pubkey = { workspace = true }
-solana-rent = { workspace = true }
+badchain-rent = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-sha256-hasher = { workspace = true }
 solana-shred-version = { workspace = true }

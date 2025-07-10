@@ -30,12 +30,12 @@ frozen-abi = [
 serde = [
     "dep:serde",
     "dep:serde_derive",
-    "solana-clock/serde",
-    "solana-epoch-rewards/serde",
-    "solana-epoch-schedule/serde",
+    "badchain-clock/serde",
+    "badchain-epoch-rewards/serde",
+    "badchain-epoch-schedule/serde",
     "solana-fee-calculator/serde",
-    "solana-last-restart-slot/serde",
-    "solana-rent/serde",
+    "badchain-last-restart-slot/serde",
+    "badchain-rent/serde",
     "solana-slot-hashes/serde",
     "badchain-bad-addresses/serde",
     "badchain-raffle-649/serde",
@@ -51,20 +51,20 @@ lazy_static = { workspace = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-account-info = { workspace = true }
-solana-clock = { workspace = true, features = ["sysvar"] }
-solana-epoch-rewards = { workspace = true, features = ["sysvar"] }
-solana-epoch-schedule = { workspace = true, features = ["sysvar"] }
+badchain-clock = { workspace = true, features = ["sysvar"] }
+badchain-epoch-rewards = { workspace = true, features = ["sysvar"] }
+badchain-epoch-schedule = { workspace = true, features = ["sysvar"] }
 solana-fee-calculator = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-hash = { workspace = true, features = ["bytemuck"] }
 solana-instruction = { workspace = true }
 solana-instructions-sysvar = { workspace = true }
-solana-last-restart-slot = { workspace = true, features = ["sysvar"] }
+badchain-last-restart-slot = { workspace = true, features = ["sysvar"] }
 solana-program-entrypoint = { workspace = true }
 solana-program-error = { workspace = true }
 solana-pubkey = { workspace = true }
-solana-rent = { workspace = true, features = ["sysvar"] }
+badchain-rent = { workspace = true, features = ["sysvar"] }
 solana-sanitize = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }

@@ -19,21 +19,21 @@ frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro"]
 serde = [
     "dep:serde",
     "dep:serde_derive",
-    "solana-epoch-schedule/serde",
-    "solana-rent/serde",
+    "badchain-epoch-schedule/serde",
+    "badchain-rent/serde",
 ]
 
 [dependencies]
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-account = { workspace = true }
-solana-clock = { workspace = true }
-solana-epoch-schedule = { workspace = true }
+badchain-clock = { workspace = true }
+badchain-epoch-schedule = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-genesis-config = { workspace = true }
 solana-pubkey = { workspace = true }
-solana-rent = { workspace = true }
+badchain-rent = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 
 [dev-dependencies]

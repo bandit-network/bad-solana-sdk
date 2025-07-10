@@ -16,7 +16,7 @@ use {
         account_info::AccountInfo, entrypoint::ProgramResult, instruction::Instruction,
         pubkey::Pubkey, stable_layout::stable_instruction::StableInstruction,
     },
-    solana_clock::Epoch,
+    badchain_clock::Epoch,
 };
 
 /// Like [`solana_cpi::invoke`], but with support

@@ -42,7 +42,7 @@ serde = { workspace = true, optional = true }
 serde_bytes = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-account-info = { workspace = true }
-solana-clock = { workspace = true }
+badchain-clock = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-instruction = { workspace = true }

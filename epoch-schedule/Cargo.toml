@@ -1,5 +1,5 @@
 [package]
-name = "solana-epoch-schedule"
+name = "badchain-epoch-schedule"
 description = "Configuration for Solana epochs and slots."
 documentation = "https://docs.rs/solana-epoch-schedule"
 version = "2.2.1"
@@ -27,8 +27,8 @@ solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
-solana-clock = { workspace = true }
-solana-epoch-schedule = { path = ".", features = ["sysvar"] }
+badchain-clock = { workspace = true }
+badchain-epoch-schedule = { path = ".", features = ["sysvar"] }
 static_assertions = { workspace = true }
 
 [lints]

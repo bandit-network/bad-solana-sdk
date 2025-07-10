@@ -50,7 +50,7 @@ num-derive = { workspace = true }
 num-traits = { workspace = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-clock = { workspace = true }
+badchain-clock = { workspace = true }
 solana-frozen-abi = { workspace = true, features = [
     "frozen-abi",
 ], optional = true }
@@ -60,7 +60,7 @@ solana-frozen-abi-macro = { workspace = true, features = [
 solana-hash = { workspace = true }
 solana-instruction = { workspace = true, features = ["std"] }
 solana-pubkey = { workspace = true }
-solana-rent = { workspace = true }
+badchain-rent = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-serde-varint = { workspace = true, optional = true }
 solana-serialize-utils = { workspace = true, optional = true }
@@ -75,7 +75,7 @@ solana-serialize-utils = { workspace = true }
 [dev-dependencies]
 itertools = { workspace = true }
 rand = { workspace = true }
-solana-epoch-schedule = { workspace = true }
+badchain-epoch-schedule = { workspace = true }
 solana-logger = { workspace = true }
 solana-pubkey = { workspace = true, features = ["dev-context-only-utils"] }
 solana-vote-interface = { path = ".", features = ["dev-context-only-utils"] }

@@ -23,7 +23,7 @@
 //!     accounts: &[AccountInfo],
 //!     instruction_data: &[u8],
 //! ) -> ProgramResult {
-//!     let clock = solana_clock::Clock::get()?;
+//!     let clock = badchain_clock::Clock::get()?;
 //!     msg!("clock: {:#?}", clock);
 //!     Ok(())
 //! }
@@ -48,7 +48,7 @@
 //! ) -> ProgramResult {
 //!     let account_info_iter = &mut accounts.iter();
 //!     let clock_account = next_account_info(account_info_iter)?;
-//!     let clock = solana_clock::Clock::from_account_info(&clock_account)?;
+//!     let clock = badchain_clock::Clock::from_account_info(&clock_account)?;
 //!     msg!("clock: {:#?}", clock);
 //!     Ok(())
 //! }
@@ -251,8 +251,8 @@ mod tests {
     use {
         super::*,
         crate::program_stubs::{set_syscall_stubs, SyscallStubs},
+        badchain_clock::Epoch,
         serde_derive::{Deserialize, Serialize},
-        solana_clock::Epoch,
         solana_program_entrypoint::SUCCESS,
         solana_program_error::ProgramError,
         solana_pubkey::Pubkey,

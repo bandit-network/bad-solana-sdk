@@ -8,13 +8,13 @@ use serde_derive::{Deserialize, Serialize};
 use solana_frozen_abi_macro::AbiExample;
 use {
     crate::authorized_voters::AuthorizedVoters,
-    solana_clock::{Epoch, Slot, UnixTimestamp},
+    badchain_clock::{Epoch, Slot, UnixTimestamp},
+    badchain_rent::Rent,
     solana_pubkey::Pubkey,
-    solana_rent::Rent,
     std::{collections::VecDeque, fmt::Debug},
 };
 #[cfg(test)]
-use {arbitrary::Unstructured, solana_epoch_schedule::MAX_LEADER_SCHEDULE_EPOCH_OFFSET};
+use {arbitrary::Unstructured, badchain_epoch_schedule::MAX_LEADER_SCHEDULE_EPOCH_OFFSET};
 
 mod vote_state_0_23_5;
 pub mod vote_state_1_14_11;
@@ -389,8 +389,8 @@ pub mod serde_tower_sync {
 #[cfg(test)]
 mod tests {
     use {
-        super::*, crate::error::VoteError, bincode::serialized_size, core::mem::MaybeUninit,
-        itertools::Itertools, rand::Rng, solana_clock::Clock, solana_hash::Hash,
+        super::*, crate::error::VoteError, badchain_clock::Clock, bincode::serialized_size,
+        core::mem::MaybeUninit, itertools::Itertools, rand::Rng, solana_hash::Hash,
         solana_instruction::error::InstructionError,
     };
 
@@ -998,7 +998,7 @@ mod tests {
 
     #[test]
     fn test_minimum_balance() {
-        let rent = solana_rent::Rent::default();
+        let rent = badchain_rent::Rent::default();
         let minimum_balance = rent.minimum_balance(VoteState::size_of());
         // golden, may need updating when vote_state grows
         assert!(minimum_balance as f64 / 10f64.powf(9.0) < 0.04)

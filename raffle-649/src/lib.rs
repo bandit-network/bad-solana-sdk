@@ -25,9 +25,9 @@
 #[cfg(feature = "sysvar")]
 pub mod sysvar;
 
+use badchain_clock::Slot;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-use solana_clock::Slot;
 use solana_sdk_macro::CloneZeroed;
 
 pub type RoundId = u64;

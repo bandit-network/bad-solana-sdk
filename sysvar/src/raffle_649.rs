@@ -17,7 +17,7 @@
 //!
 //! ```no_run
 //! # use solana_account_info::AccountInfo;
-//! # use solana_clock::Clock;
+//! # use badchain_clock::Clock;
 //! # use solana_msg::msg;
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
@@ -53,7 +53,7 @@
 //!
 //! ```
 //! # use solana_account_info::{AccountInfo, next_account_info};
-//! # use solana_clock::Clock;
+//! # use badchain_clock::Clock;
 //! # use solana_msg::msg;
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
@@ -93,7 +93,7 @@
 //! Accessing via the RPC client:
 //!
 //! ```
-//! # use solana_clock::Clock;
+//! # use badchain_clock::Clock;
 //! # use solana_program::example_mocks::solana_sdk;
 //! # use solana_program::example_mocks::solana_rpc_client;
 //! # use solana_rpc_client::rpc_client::RpcClient;

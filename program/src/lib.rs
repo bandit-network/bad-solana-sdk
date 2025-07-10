@@ -496,6 +496,10 @@ pub mod slot_history;
 pub mod syscalls;
 pub mod sysvar;
 
+#[deprecated(since = "2.1.0", note = "Use `solana-epoch-rewards` crate instead")]
+pub use badchain_epoch_rewards as epoch_rewards;
+#[deprecated(since = "2.1.0", note = "Use `solana-last-restart-slot` crate instead")]
+pub use badchain_last_restart_slot as last_restart_slot;
 #[cfg(not(target_os = "solana"))]
 pub use badchain_sysvar::program_stubs;
 #[deprecated(since = "2.2.0", note = "Use `solana-big-mod-exp` crate instead")]
@@ -511,14 +515,10 @@ pub use solana_borsh::v0_10 as borsh0_10;
 #[cfg(feature = "borsh")]
 #[deprecated(since = "2.1.0", note = "Use `solana-borsh` crate instead")]
 pub use solana_borsh::v1 as borsh1;
-#[deprecated(since = "2.1.0", note = "Use `solana-epoch-rewards` crate instead")]
-pub use solana_epoch_rewards as epoch_rewards;
 #[deprecated(since = "2.1.0", note = "Use `solana-fee-calculator` crate instead")]
 pub use solana_fee_calculator as fee_calculator;
 #[deprecated(since = "2.2.0", note = "Use `solana-keccak-hasher` crate instead")]
 pub use solana_keccak_hasher as keccak;
-#[deprecated(since = "2.1.0", note = "Use `solana-last-restart-slot` crate instead")]
-pub use solana_last_restart_slot as last_restart_slot;
 #[deprecated(since = "2.1.0", note = "Use `solana-program-memory` crate instead")]
 pub use solana_program_memory as program_memory;
 #[deprecated(since = "2.1.0", note = "Use `solana-program-pack` crate instead")]
@@ -534,16 +534,16 @@ pub use solana_short_vec as short_vec;
 #[deprecated(since = "2.1.0", note = "Use `solana-stable-layout` crate instead")]
 pub use solana_stable_layout as stable_layout;
 pub use {
+    badchain_clock as clock, badchain_rent as rent,
     badchain_sysvar::impl_sysvar_get,
     solana_account_info::{self as account_info, debug_account_data},
-    solana_clock as clock,
     solana_msg::msg,
     solana_native_token as native_token,
     solana_program_entrypoint::{
         self as entrypoint, custom_heap_default, custom_panic_default, entrypoint,
         entrypoint_no_alloc,
     },
-    solana_program_option as program_option, solana_pubkey as pubkey, solana_rent as rent,
+    solana_program_option as program_option, solana_pubkey as pubkey,
 };
 /// The [config native program][np].
 ///

@@ -1,5 +1,5 @@
 [package]
-name = "solana-clock"
+name = "badchain-clock"
 description = "Solana Clock and Time Definitions"
 documentation = "https://docs.rs/solana-clock"
 version = "2.2.2"
@@ -26,5 +26,5 @@ solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
-solana-clock = { path = ".", features = ["sysvar"] }
+badchain-clock = { path = ".", features = ["sysvar"] }
 static_assertions = { workspace = true }

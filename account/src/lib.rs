@@ -11,9 +11,9 @@ use serde::ser::{Serialize, Serializer};
 #[cfg(feature = "frozen-abi")]
 use solana_frozen_abi_macro::{frozen_abi, AbiExample};
 use {
+    badchain_clock::{Epoch, INITIAL_RENT_EPOCH},
     badchain_sdk_ids::{bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, loader_v4},
     solana_account_info::{debug_account_data::*, AccountInfo},
-    solana_clock::{Epoch, INITIAL_RENT_EPOCH},
     solana_instruction::error::LamportsError,
     solana_pubkey::Pubkey,
     std::{
@@ -62,8 +62,8 @@ mod account_serialize {
     use solana_frozen_abi_macro::{frozen_abi, AbiExample};
     use {
         crate::ReadableAccount,
+        badchain_clock::Epoch,
         serde::{ser::Serializer, Serialize},
-        solana_clock::Epoch,
         solana_pubkey::Pubkey,
     };
     #[repr(C)]

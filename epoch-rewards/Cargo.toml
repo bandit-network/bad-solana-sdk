@@ -1,5 +1,5 @@
 [package]
-name = "solana-epoch-rewards"
+name = "badchain-epoch-rewards"
 description = "Solana epoch rewards sysvar."
 documentation = "https://docs.rs/solana-epoch-rewards"
 version = "2.2.1"
@@ -36,7 +36,7 @@ solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
-solana-epoch-rewards = { path = ".", features = ["sysvar"] }
+badchain-epoch-rewards = { path = ".", features = ["sysvar"] }
 
 [lints]
 workspace = true

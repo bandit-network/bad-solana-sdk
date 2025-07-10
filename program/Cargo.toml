@@ -35,13 +35,13 @@ dev-context-only-utils = ["solana-instructions-sysvar/dev-context-only-utils"]
 frozen-abi = [
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
-    "solana-epoch-rewards/frozen-abi",
-    "solana-epoch-schedule/frozen-abi",
+    "badchain-epoch-rewards/frozen-abi",
+    "badchain-epoch-schedule/frozen-abi",
     "solana-fee-calculator/frozen-abi",
     "solana-hash/frozen-abi",
     "solana-instruction/frozen-abi",
     "solana-pubkey/frozen-abi",
-    "solana-rent/frozen-abi",
+    "badchain-rent/frozen-abi",
     "solana-short-vec/frozen-abi",
     "badchain-sysvar/frozen-abi",
 ]
@@ -67,10 +67,10 @@ solana-atomic-u64 = { workspace = true }
 solana-big-mod-exp = { workspace = true }
 solana-blake3-hasher = { workspace = true, features = ["blake3"] }
 solana-borsh = { workspace = true, optional = true }
-solana-clock = { workspace = true, features = ["serde", "sysvar"] }
+badchain-clock = { workspace = true, features = ["serde", "sysvar"] }
 solana-cpi = { workspace = true }
-solana-epoch-rewards = { workspace = true, features = ["serde", "sysvar"] }
-solana-epoch-schedule = { workspace = true, features = ["serde", "sysvar"] }
+badchain-epoch-rewards = { workspace = true, features = ["serde", "sysvar"] }
+badchain-epoch-schedule = { workspace = true, features = ["serde", "sysvar"] }
 solana-fee-calculator = { workspace = true, features = ["serde"] }
 solana-frozen-abi = { workspace = true, optional = true, features = [
     "frozen-abi",
@@ -87,7 +87,10 @@ solana-instruction = { workspace = true, default-features = false, features = [
 ] }
 solana-instructions-sysvar = { workspace = true }
 solana-keccak-hasher = { workspace = true, features = ["sha3"] }
-solana-last-restart-slot = { workspace = true, features = ["serde", "sysvar"] }
+badchain-last-restart-slot = { workspace = true, features = [
+    "serde",
+    "sysvar",
+] }
 solana-msg = { workspace = true }
 solana-native-token = { workspace = true }
 solana-program-entrypoint = { workspace = true }
@@ -101,7 +104,7 @@ solana-pubkey = { workspace = true, features = [
     "serde",
     "std",
 ] }
-solana-rent = { workspace = true, features = ["serde", "sysvar"] }
+badchain-rent = { workspace = true, features = ["serde", "sysvar"] }
 badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }
 solana-secp256k1-recover = { workspace = true }

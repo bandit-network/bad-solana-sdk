@@ -6,7 +6,7 @@ use solana_frozen_abi_macro::{AbiEnumVisitor, AbiExample};
 use solana_instruction::error::InstructionError;
 use {
     crate::error::AddressLookupError,
-    solana_clock::Slot,
+    badchain_clock::Slot,
     solana_pubkey::Pubkey,
     solana_slot_hashes::{get_entries, SlotHashes, MAX_ENTRIES},
     std::borrow::Cow,

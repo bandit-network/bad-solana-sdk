@@ -294,7 +294,7 @@ dependencies = [
  "solana-program-memory",
  "solana-pubkey",
  "solana-sanitize",
- "solana-sdk-macro",
+ "solana-sdk-macro 2.2.1",
  "solana-seed-derivable",
  "solana-seed-phrase",
  "solana-serde",
@@ -324,15 +324,85 @@ dependencies = [
 ]
 
 [[package]]
-name = "badchain-raffle-649"
-version = "0.0.1"
+name = "badchain-clock"
+version = "2.2.2"
+dependencies = [
+ "badchain-clock",
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-sdk-macro 2.2.1",
+ "static_assertions",
+]
+
+[[package]]
+name = "badchain-epoch-rewards"
+version = "2.2.1"
+dependencies = [
+ "badchain-epoch-rewards",
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-hash",
+ "solana-sdk-macro 2.2.1",
+]
+
+[[package]]
+name = "badchain-epoch-schedule"
+version = "2.2.1"
+dependencies = [
+ "badchain-clock",
+ "badchain-epoch-schedule",
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-sdk-macro 2.2.1",
+ "static_assertions",
+]
+
+[[package]]
+name = "badchain-last-restart-slot"
+version = "2.2.1"
 dependencies = [
  "badchain-sdk-ids",
  "badchain-sysvar-id",
  "serde",
  "serde_derive",
- "solana-clock",
- "solana-sdk-macro",
+ "solana-sdk-macro 2.2.1",
+]
+
+[[package]]
+name = "badchain-raffle-649"
+version = "0.0.1"
+dependencies = [
+ "badchain-clock",
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-sdk-macro 2.2.1",
+ "static_assertions",
+]
+
+[[package]]
+name = "badchain-rent"
+version = "2.2.1"
+dependencies = [
+ "badchain-clock",
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-sdk-macro 2.2.1",
  "static_assertions",
 ]
 
@@ -350,7 +420,12 @@ dependencies = [
  "anyhow",
  "bad-solana-sdk",
  "badchain-bad-addresses",
+ "badchain-clock",
+ "badchain-epoch-rewards",
+ "badchain-epoch-schedule",
+ "badchain-last-restart-slot",
  "badchain-raffle-649",
+ "badchain-rent",
  "badchain-sdk-ids",
  "badchain-sysvar",
  "badchain-sysvar-id",
@@ -364,26 +439,21 @@ dependencies = [
  "serde_derive",
  "serial_test",
  "solana-account-info",
- "solana-clock",
  "solana-define-syscall",
- "solana-epoch-rewards",
- "solana-epoch-schedule",
  "solana-fee-calculator",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-hash",
  "solana-instruction",
  "solana-instructions-sysvar",
- "solana-last-restart-slot",
  "solana-msg",
  "solana-program",
  "solana-program-entrypoint",
  "solana-program-error",
  "solana-program-memory",
  "solana-pubkey",
- "solana-rent",
  "solana-sanitize",
- "solana-sdk-macro",
+ "solana-sdk-macro 2.2.1",
  "solana-sha256-hasher",
  "solana-slot-hashes",
  "solana-slot-history",
@@ -2872,6 +2942,7 @@ dependencies = [
 name = "solana-account"
 version = "2.2.1"
 dependencies = [
+ "badchain-clock",
  "badchain-sdk-ids",
  "badchain-sysvar",
  "bincode",
@@ -2881,7 +2952,6 @@ dependencies = [
  "serde_derive",
  "solana-account",
  "solana-account-info",
- "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-instruction",
@@ -2904,13 +2974,13 @@ dependencies = [
 name = "solana-address-lookup-table-interface"
 version = "2.2.2"
 dependencies = [
+ "badchain-clock",
  "badchain-sdk-ids",
  "bincode",
  "bytemuck",
  "serde",
  "serde_derive",
  "solana-address-lookup-table-interface",
- "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-hash",
@@ -3041,14 +3111,10 @@ dependencies = [
 [[package]]
 name = "solana-clock"
 version = "2.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1bb482ab70fced82ad3d7d3d87be33d466a3498eb8aa856434ff3c0dfc2e2e31"
 dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-clock",
- "solana-sdk-macro",
- "static_assertions",
+ "solana-sdk-macro 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -3141,21 +3207,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "solana-epoch-rewards"
-version = "2.2.1"
-dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-epoch-rewards",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
- "solana-hash",
- "solana-sdk-macro",
-]
-
-[[package]]
 name = "solana-epoch-rewards-hasher"
 version = "2.2.1"
 dependencies = [
@@ -3165,30 +3216,14 @@ dependencies = [
 ]
 
 [[package]]
-name = "solana-epoch-schedule"
-version = "2.2.1"
-dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-clock",
- "solana-epoch-schedule",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
- "solana-sdk-macro",
- "static_assertions",
-]
-
-[[package]]
 name = "solana-example-mocks"
 version = "2.2.1"
 dependencies = [
+ "badchain-clock",
  "badchain-sdk-ids",
  "serde",
  "serde_derive",
  "solana-address-lookup-table-interface",
- "solana-clock",
  "solana-hash",
  "solana-instruction",
  "solana-keccak-hasher",
@@ -3203,6 +3238,7 @@ dependencies = [
 name = "solana-feature-gate-interface"
 version = "2.2.2"
 dependencies = [
+ "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
  "serde",
@@ -3213,7 +3249,6 @@ dependencies = [
  "solana-instruction",
  "solana-program-error",
  "solana-pubkey",
- "solana-rent",
  "solana-system-interface",
 ]
 
@@ -3221,10 +3256,10 @@ dependencies = [
 name = "solana-fee-calculator"
 version = "2.2.1"
 dependencies = [
+ "badchain-clock",
  "log",
  "serde",
  "serde_derive",
- "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-logger",
@@ -3288,6 +3323,9 @@ dependencies = [
 name = "solana-genesis-config"
 version = "2.3.0"
 dependencies = [
+ "badchain-clock",
+ "badchain-epoch-schedule",
+ "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
  "chrono",
@@ -3295,9 +3333,7 @@ dependencies = [
  "serde",
  "serde_derive",
  "solana-account",
- "solana-clock",
  "solana-cluster-type",
- "solana-epoch-schedule",
  "solana-fee-calculator",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
@@ -3308,7 +3344,6 @@ dependencies = [
  "solana-logger",
  "solana-poh-config",
  "solana-pubkey",
- "solana-rent",
  "solana-sha256-hasher",
  "solana-shred-version",
  "solana-signer",
@@ -3422,17 +3457,6 @@ dependencies = [
  "static_assertions",
  "tiny-bip39",
  "wasm-bindgen",
-]
-
-[[package]]
-name = "solana-last-restart-slot"
-version = "2.2.1"
-dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-sdk-macro",
 ]
 
 [[package]]
@@ -3619,9 +3643,9 @@ dependencies = [
 name = "solana-poh-config"
 version = "2.2.1"
 dependencies = [
+ "badchain-clock",
  "serde",
  "serde_derive",
- "solana-clock",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "static_assertions",
@@ -3649,6 +3673,11 @@ name = "solana-program"
 version = "2.3.0"
 dependencies = [
  "arbitrary",
+ "badchain-clock",
+ "badchain-epoch-rewards",
+ "badchain-epoch-schedule",
+ "badchain-last-restart-slot",
+ "badchain-rent",
  "badchain-sdk-ids",
  "badchain-sysvar",
  "badchain-sysvar-id",
@@ -3671,11 +3700,8 @@ dependencies = [
  "solana-big-mod-exp",
  "solana-blake3-hasher",
  "solana-borsh",
- "solana-clock",
  "solana-cpi",
  "solana-define-syscall",
- "solana-epoch-rewards",
- "solana-epoch-schedule",
  "solana-example-mocks",
  "solana-fee-calculator",
  "solana-frozen-abi",
@@ -3684,7 +3710,6 @@ dependencies = [
  "solana-instruction",
  "solana-instructions-sysvar",
  "solana-keccak-hasher",
- "solana-last-restart-slot",
  "solana-msg",
  "solana-native-token",
  "solana-program-entrypoint",
@@ -3693,8 +3718,7 @@ dependencies = [
  "solana-program-option",
  "solana-program-pack",
  "solana-pubkey",
- "solana-rent",
- "solana-sdk-macro",
+ "solana-sdk-macro 2.2.1",
  "solana-secp256k1-recover",
  "solana-serde-varint",
  "solana-serialize-utils",
@@ -3790,37 +3814,22 @@ dependencies = [
 ]
 
 [[package]]
-name = "solana-rent"
-version = "2.2.1"
-dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-clock",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
- "solana-sdk-macro",
- "static_assertions",
-]
-
-[[package]]
 name = "solana-rent-collector"
 version = "2.2.1"
 dependencies = [
  "assert_matches",
+ "badchain-clock",
+ "badchain-epoch-schedule",
+ "badchain-rent",
  "badchain-sdk-ids",
  "serde",
  "serde_derive",
  "solana-account",
- "solana-clock",
- "solana-epoch-schedule",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-genesis-config",
  "solana-logger",
  "solana-pubkey",
- "solana-rent",
 ]
 
 [[package]]
@@ -3857,6 +3866,18 @@ dependencies = [
 [[package]]
 name = "solana-sdk-macro"
 version = "2.2.1"
+dependencies = [
+ "bs58",
+ "proc-macro2",
+ "quote",
+ "syn 2.0.98",
+]
+
+[[package]]
+name = "solana-sdk-macro"
+version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "86280da8b99d03560f6ab5aca9de2e38805681df34e0bb8f238e69b29433b9df"
 dependencies = [
  "bs58",
  "proc-macro2",
@@ -4178,6 +4199,9 @@ name = "solana-vote-interface"
 version = "2.2.5"
 dependencies = [
  "arbitrary",
+ "badchain-clock",
+ "badchain-epoch-schedule",
+ "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
  "itertools 0.12.1",
@@ -4186,15 +4210,12 @@ dependencies = [
  "rand 0.8.5",
  "serde",
  "serde_derive",
- "solana-clock",
- "solana-epoch-schedule",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-hash",
  "solana-instruction",
  "solana-logger",
  "solana-pubkey",
- "solana-rent",
  "solana-serde-varint",
  "solana-serialize-utils",
  "solana-short-vec",

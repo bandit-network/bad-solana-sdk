@@ -6,7 +6,7 @@ use {
         Vote, VoteAuthorize, VoteAuthorizeCheckedWithSeedArgs, VoteAuthorizeWithSeedArgs, VoteInit,
         VoteStateUpdate, VoteStateVersions,
     },
-    solana_clock::{Slot, UnixTimestamp},
+    badchain_clock::{Slot, UnixTimestamp},
     solana_hash::Hash,
     solana_pubkey::Pubkey,
 };

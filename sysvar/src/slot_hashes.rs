@@ -50,7 +50,7 @@
 use bytemuck_derive::{Pod, Zeroable};
 #[cfg(feature = "bincode")]
 use {crate::Sysvar, solana_account_info::AccountInfo};
-use {solana_clock::Slot, solana_hash::Hash};
+use {badchain_clock::Slot, solana_hash::Hash};
 
 #[cfg(feature = "bytemuck")]
 const U64_SIZE: usize = std::mem::size_of::<u64>();

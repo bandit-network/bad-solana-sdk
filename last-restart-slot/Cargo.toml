@@ -1,5 +1,5 @@
 [package]
-name = "solana-last-restart-slot"
+name = "badchain-last-restart-slot"
 description = "Types and utilities for the Solana LastRestartSlot sysvar."
 documentation = "https://docs.rs/solana-last-restart-slot"
 version = "2.2.1"

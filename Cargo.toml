@@ -217,7 +217,7 @@ solana-bls-signatures = { path = "bls-signatures", version = "0.1.1" }
 solana-bn254 = { path = "bn254", version = "2.2.2" }
 solana-borsh = { path = "borsh", version = "2.2.1" }
 solana-client-traits = { path = "client-traits", version = "2.2.1" }
-solana-clock = { path = "clock", version = "2.2.1" }
+badchain-clock = { path = "clock", version = "2.2.1" }
 solana-cluster-type = { path = "cluster-type", version = "2.2.1" }
 solana-commitment-config = { path = "commitment-config", version = "2.2.1" }
 solana-compute-budget-interface = { path = "compute-budget-interface", version = "2.2.1" }
@@ -226,9 +226,9 @@ solana-define-syscall = { path = "define-syscall", version = "2.2.1" }
 solana-derivation-path = { path = "derivation-path", version = "2.2.1" }
 solana-ed25519-program = { path = "ed25519-program", version = "2.2.1" }
 solana-epoch-info = { path = "epoch-info", version = "2.2.1" }
-solana-epoch-rewards = { path = "epoch-rewards", version = "2.2.1" }
+badchain-epoch-rewards = { path = "epoch-rewards", version = "2.2.1" }
 solana-epoch-rewards-hasher = { path = "epoch-rewards-hasher", version = "2.2.1" }
-solana-epoch-schedule = { path = "epoch-schedule", version = "2.2.1" }
+badchain-epoch-schedule = { path = "epoch-schedule", version = "2.2.1" }
 solana-example-mocks = { path = "example-mocks", version = "2.2.1" }
 solana-feature-gate-interface = { path = "feature-gate-interface", version = "2.2.1" }
 solana-fee-calculator = { path = "fee-calculator", version = "2.2.1" }
@@ -244,7 +244,7 @@ solana-instruction = { path = "instruction", version = "2.3.0", default-features
 solana-instructions-sysvar = { path = "instructions-sysvar", version = "2.2.1" }
 solana-keccak-hasher = { path = "keccak-hasher", version = "2.2.1" }
 solana-keypair = { path = "keypair", version = "2.2.1" }
-solana-last-restart-slot = { path = "last-restart-slot", version = "2.2.1" }
+badchain-last-restart-slot = { path = "last-restart-slot", version = "2.2.1" }
 solana-loader-v2-interface = { path = "loader-v2-interface", version = "2.2.1" }
 solana-loader-v3-interface = { path = "loader-v3-interface", version = "5.0.0" }
 solana-loader-v4-interface = { path = "loader-v4-interface", version = "2.2.1" }
@@ -269,7 +269,7 @@ solana-program-option = { path = "program-option", version = "2.2.1" }
 solana-program-pack = { path = "program-pack", version = "2.2.1" }
 solana-pubkey = { path = "pubkey", version = "2.2.1", default-features = false }
 solana-quic-definitions = { path = "quic-definitions", version = "2.2.1" }
-solana-rent = { path = "rent", version = "2.2.1", default-features = false }
+badchain-rent = { path = "rent", version = "2.2.1", default-features = false }
 solana-rent-collector = { path = "rent-collector", version = "2.2.1" }
 solana-rent-debits = { path = "rent-debits", version = "2.2.1" }
 solana-reward-info = { path = "reward-info", version = "2.2.1" }
@@ -354,13 +354,13 @@ opt-level = 1
 # statements in place, run `cargo update -p solana-program` to remove extraneous
 # versions from your Cargo.lock file.
 solana-account = { path = "account" }
-solana-clock = { path = "clock" }
+badchain-clock = { path = "clock" }
 solana-cpi = { path = "cpi" }
 solana-frozen-abi = { path = "frozen-abi" }
 solana-frozen-abi-macro = { path = "frozen-abi-macro" }
 solana-instruction = { path = "instruction" }
 solana-program-error = { path = "program-error" }
 solana-pubkey = { path = "pubkey" }
-solana-rent = { path = "rent" }
+badchain-rent = { path = "rent" }
 solana-signature = { path = "signature" }
 badchain-sysvar-id = { path = "sysvar-id" }

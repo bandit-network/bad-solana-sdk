@@ -31,7 +31,7 @@ bincode = { workspace = true, optional = true }
 bytemuck = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-clock = { workspace = true }
+badchain-clock = { workspace = true }
 solana-frozen-abi = { workspace = true, features = [
     "frozen-abi",
 ], optional = true }

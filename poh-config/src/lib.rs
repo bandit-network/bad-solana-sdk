@@ -9,7 +9,7 @@ const DEFAULT_TICKS_PER_SECOND: u64 = 160;
 #[cfg(test)]
 static_assertions::const_assert_eq!(
     DEFAULT_TICKS_PER_SECOND,
-    solana_clock::DEFAULT_TICKS_PER_SECOND
+    badchain_clock::DEFAULT_TICKS_PER_SECOND
 );
 
 #[cfg_attr(feature = "frozen-abi", derive(solana_frozen_abi_macro::AbiExample))]

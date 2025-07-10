@@ -28,7 +28,7 @@
 //!
 //! ```no_run
 //! # use solana_account_info::AccountInfo;
-//! # use solana_epoch_rewards::EpochRewards;
+//! # use badchain_epoch_rewards::EpochRewards;
 //! # use solana_msg::msg;
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
@@ -71,7 +71,7 @@
 //!
 //! ```
 //! # use solana_account_info::{AccountInfo, next_account_info};
-//! # use solana_epoch_rewards::EpochRewards;
+//! # use badchain_epoch_rewards::EpochRewards;
 //! # use solana_msg::msg;
 //! # use solana_program_error::{ProgramError, ProgramResult};
 //! # use solana_pubkey::Pubkey;
@@ -118,7 +118,7 @@
 //! Accessing via the RPC client:
 //!
 //! ```
-//! # use solana_epoch_rewards::EpochRewards;
+//! # use badchain_epoch_rewards::EpochRewards;
 //! # use solana_program::example_mocks::solana_sdk;
 //! # use solana_program::example_mocks::solana_rpc_client;
 //! # use solana_rpc_client::rpc_client::RpcClient;
@@ -158,8 +158,8 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
+    badchain_epoch_rewards::EpochRewards,
     badchain_sdk_ids::sysvar::epoch_rewards::{check_id, id, ID},
-    solana_epoch_rewards::EpochRewards,
 };
 
 #[cfg(feature = "bincode")]

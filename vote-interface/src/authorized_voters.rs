@@ -2,7 +2,7 @@
 use arbitrary::Arbitrary;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
-use {solana_clock::Epoch, solana_pubkey::Pubkey, std::collections::BTreeMap};
+use {badchain_clock::Epoch, solana_pubkey::Pubkey, std::collections::BTreeMap};
 
 #[cfg_attr(feature = "frozen-abi", derive(solana_frozen_abi_macro::AbiExample))]
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]

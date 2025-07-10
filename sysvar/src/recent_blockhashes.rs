@@ -167,7 +167,7 @@ impl Deref for RecentBlockhashes {
 
 #[cfg(test)]
 mod tests {
-    use {super::*, solana_clock::MAX_PROCESSING_AGE};
+    use {super::*, badchain_clock::MAX_PROCESSING_AGE};
 
     #[test]
     #[allow(clippy::assertions_on_constants)]

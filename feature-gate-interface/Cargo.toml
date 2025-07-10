@@ -19,7 +19,7 @@ bincode = [
     "dep:solana-account-info",
     "dep:solana-instruction",
     "dep:solana-program-error",
-    "dep:solana-rent",
+    "dep:badchain-rent",
     "dep:solana-system-interface",
     "serde",
 ]
@@ -35,7 +35,7 @@ solana-account-info = { workspace = true, optional = true }
 solana-instruction = { workspace = true, optional = true }
 solana-program-error = { workspace = true, optional = true }
 solana-pubkey = { workspace = true }
-solana-rent = { workspace = true, optional = true }
+badchain-rent = { workspace = true, optional = true }
 badchain-sdk-ids = { workspace = true }
 solana-system-interface = { workspace = true, optional = true, features = [
     "bincode",

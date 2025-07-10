@@ -14,10 +14,10 @@ use {
     crate::{
         authorized_voters::AuthorizedVoters, error::VoteError, state::DEFAULT_PRIOR_VOTERS_OFFSET,
     },
-    solana_clock::{Clock, Epoch, Slot, UnixTimestamp},
+    badchain_clock::{Clock, Epoch, Slot, UnixTimestamp},
+    badchain_rent::Rent,
     solana_instruction::error::InstructionError,
     solana_pubkey::Pubkey,
-    solana_rent::Rent,
     std::{collections::VecDeque, fmt::Debug},
 };
 
@@ -304,7 +304,7 @@ impl VoteState {
 
     #[cfg(test)]
     pub(crate) fn get_max_sized_vote_state() -> VoteState {
-        use solana_epoch_schedule::MAX_LEADER_SCHEDULE_EPOCH_OFFSET;
+        use badchain_epoch_schedule::MAX_LEADER_SCHEDULE_EPOCH_OFFSET;
         let mut authorized_voters = AuthorizedVoters::default();
         for i in 0..=MAX_LEADER_SCHEDULE_EPOCH_OFFSET {
             authorized_voters.insert(i, Pubkey::new_unique());
@@ -607,7 +607,7 @@ mod vote_state_deserialize {
                 MAX_ITEMS, MAX_LOCKOUT_HISTORY,
             },
         },
-        solana_clock::Epoch,
+        badchain_clock::Epoch,
         solana_instruction::error::InstructionError,
         solana_pubkey::Pubkey,
         solana_serialize_utils::cursor::{

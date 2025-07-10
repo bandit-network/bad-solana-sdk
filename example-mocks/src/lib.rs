@@ -110,7 +110,7 @@ pub mod solana_rpc_client_nonce_utils {
 }
 
 pub mod solana_account {
-    use {solana_clock::Epoch, solana_pubkey::Pubkey};
+    use {badchain_clock::Epoch, solana_pubkey::Pubkey};
     #[derive(Clone)]
     pub struct Account {
         pub lamports: u64,
@@ -279,11 +279,11 @@ pub mod solana_sdk {
             solana_account::{self as account, state_traits as account_utils},
             solana_signer::{self as signer, signers},
         },
+        badchain_clock::Clock,
         badchain_sdk_ids::{
             system_program,
             sysvar::{self, clock},
         },
-        solana_clock::Clock,
         solana_hash as hash, solana_instruction as instruction, solana_keccak_hasher as keccak,
         solana_message as message, solana_nonce as nonce,
         solana_pubkey::{self as pubkey, Pubkey},

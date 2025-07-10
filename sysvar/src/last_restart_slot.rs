@@ -21,7 +21,7 @@
 //! # use solana_sysvar::Sysvar;
 //! # use solana_program_error::ProgramResult;
 //! # use solana_pubkey::Pubkey;
-//! # use solana_last_restart_slot::LastRestartSlot;
+//! # use badchain_last_restart_slot::LastRestartSlot;
 //!
 //! fn process_instruction(
 //!     program_id: &Pubkey,
@@ -39,8 +39,8 @@
 #[cfg(feature = "bincode")]
 use crate::{impl_sysvar_get, Sysvar};
 pub use {
+    badchain_last_restart_slot::LastRestartSlot,
     badchain_sdk_ids::sysvar::last_restart_slot::{check_id, id, ID},
-    solana_last_restart_slot::LastRestartSlot,
 };
 
 #[cfg(feature = "bincode")]

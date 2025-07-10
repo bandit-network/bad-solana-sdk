@@ -14,12 +14,12 @@
 pub use badchain_sdk_ids::feature::{check_id, id, ID};
 #[cfg(feature = "bincode")]
 use {
+    badchain_rent::Rent,
     solana_account::{AccountSharedData, ReadableAccount, WritableAccount},
     solana_account_info::AccountInfo,
     solana_instruction::Instruction,
     solana_program_error::ProgramError,
     solana_pubkey::Pubkey,
-    solana_rent::Rent,
     solana_system_interface::instruction as system_instruction,
 };
 

@@ -57,7 +57,7 @@ pub use badchain_sdk_ids::sysvar::stake_history::{check_id, id, ID};
     since = "2.2.0",
     note = "Use solana_stake_interface::stake_history instead"
 )]
-use {crate::get_sysvar, solana_clock::Epoch};
+use {crate::get_sysvar, badchain_clock::Epoch};
 
 #[cfg(feature = "bincode")]
 impl Sysvar for StakeHistory {

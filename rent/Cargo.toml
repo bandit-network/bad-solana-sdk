@@ -1,5 +1,5 @@
 [package]
-name = "solana-rent"
+name = "badchain-rent"
 description = "Configuration for Solana network rent."
 documentation = "https://docs.rs/solana-rent"
 version = "2.2.1"
@@ -27,7 +27,7 @@ solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
 
 [dev-dependencies]
-solana-clock = { workspace = true }
+badchain-clock = { workspace = true }
 static_assertions = { workspace = true }
 
 [lints]

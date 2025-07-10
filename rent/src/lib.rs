@@ -13,12 +13,12 @@ pub mod sysvar;
 
 use solana_sdk_macro::CloneZeroed;
 
-// inlined to avoid solana_clock dep
+// inlined to avoid badchain_clock dep
 const DEFAULT_SLOTS_PER_EPOCH: u64 = 432_000;
 #[cfg(test)]
 static_assertions::const_assert_eq!(
     DEFAULT_SLOTS_PER_EPOCH,
-    solana_clock::DEFAULT_SLOTS_PER_EPOCH
+    badchain_clock::DEFAULT_SLOTS_PER_EPOCH
 );
 
 /// Configuration of network rent.
