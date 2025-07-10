@@ -39,7 +39,7 @@ serde = [
     "badchain-slot-hashes/serde",
     "badchain-bad-addresses/serde",
     "badchain-raffle-649/serde",
-    "solana-slot-history/serde",
+    "badchain-slot-history/serde",
     "solana-stake-interface/serde",
 ]
 
@@ -69,7 +69,7 @@ solana-sanitize = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }
 badchain-slot-hashes = { workspace = true, features = ["sysvar"] }
-solana-slot-history = { workspace = true, features = ["sysvar"] }
+badchain-slot-history = { workspace = true, features = ["sysvar"] }
 solana-stake-interface = { workspace = true }
 badchain-sysvar-id = { workspace = true }
 badchain-bad-addresses = { workspace = true, features = ["sysvar"] }

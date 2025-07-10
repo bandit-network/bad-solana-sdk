@@ -293,7 +293,7 @@ solana-signer = { path = "signer", version = "2.2.1" }
 badchain-slot-hashes = { path = "slot-hashes", version = "2.2.1" }
 badchain-bad-addresses = {path = "bad-addresses",version = "0.0.1"}
 badchain-raffle-649 = {path = "raffle-649",version = "0.0.1"}
-solana-slot-history = { path = "slot-history", version = "2.2.1" }
+badchain-slot-history = { path = "slot-history", version = "2.2.1" }
 solana-stable-layout = { path = "stable-layout", version = "2.2.1" }
 solana-stake-interface = { version = "1.2.1" }
 solana-system-interface = "1.0"

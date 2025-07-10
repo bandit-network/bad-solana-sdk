@@ -113,7 +113,7 @@ solana-serialize-utils = { workspace = true }
 solana-sha256-hasher = { workspace = true, features = ["sha2"] }
 solana-short-vec = { workspace = true }
 badchain-slot-hashes = { workspace = true, features = ["serde", "sysvar"] }
-solana-slot-history = { workspace = true, features = ["serde", "sysvar"] }
+badchain-slot-history = { workspace = true, features = ["serde", "sysvar"] }
 solana-stable-layout = { workspace = true }
 badchain-sysvar = { workspace = true, features = ["bincode", "bytemuck"] }
 badchain-sysvar-id = { workspace = true }

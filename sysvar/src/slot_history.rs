@@ -51,10 +51,10 @@
 #[cfg(feature = "bincode")]
 use crate::Sysvar;
 pub use {
+    badchain_sdk_ids::sysvar::slot_history::{check_id, id, ID},
+    badchain_slot_history::SlotHistory,
     solana_account_info::AccountInfo,
     solana_program_error::ProgramError,
-    badchain_sdk_ids::sysvar::slot_history::{check_id, id, ID},
-    solana_slot_history::SlotHistory,
 };
 
 #[cfg(feature = "bincode")]
