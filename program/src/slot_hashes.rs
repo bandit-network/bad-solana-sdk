@@ -1,1 +1,1 @@
-pub use {badchain_clock::Slot, solana_slot_hashes::*};
+pub use {badchain_clock::Slot, badchain_slot_hashes::*};

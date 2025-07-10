@@ -36,7 +36,7 @@ serde = [
     "solana-fee-calculator/serde",
     "badchain-last-restart-slot/serde",
     "badchain-rent/serde",
-    "solana-slot-hashes/serde",
+    "badchain-slot-hashes/serde",
     "badchain-bad-addresses/serde",
     "badchain-raffle-649/serde",
     "solana-slot-history/serde",
@@ -68,7 +68,7 @@ badchain-rent = { workspace = true, features = ["sysvar"] }
 solana-sanitize = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-sdk-macro = { workspace = true }
-solana-slot-hashes = { workspace = true, features = ["sysvar"] }
+badchain-slot-hashes = { workspace = true, features = ["sysvar"] }
 solana-slot-history = { workspace = true, features = ["sysvar"] }
 solana-stake-interface = { workspace = true }
 badchain-sysvar-id = { workspace = true }

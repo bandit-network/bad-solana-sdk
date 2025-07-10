@@ -414,6 +414,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "badchain-slot-hashes"
+version = "2.2.1"
+dependencies = [
+ "badchain-sdk-ids",
+ "badchain-sysvar-id",
+ "serde",
+ "serde_derive",
+ "solana-hash",
+ "solana-sha256-hasher",
+]
+
+[[package]]
 name = "badchain-sysvar"
 version = "2.2.1"
 dependencies = [
@@ -427,6 +439,7 @@ dependencies = [
  "badchain-raffle-649",
  "badchain-rent",
  "badchain-sdk-ids",
+ "badchain-slot-hashes",
  "badchain-sysvar",
  "badchain-sysvar-id",
  "base64 0.22.1",
@@ -455,7 +468,6 @@ dependencies = [
  "solana-sanitize",
  "solana-sdk-macro 2.2.1",
  "solana-sha256-hasher",
- "solana-slot-hashes",
  "solana-slot-history",
  "solana-stake-interface",
  "test-case",
@@ -2976,6 +2988,7 @@ version = "2.2.2"
 dependencies = [
  "badchain-clock",
  "badchain-sdk-ids",
+ "badchain-slot-hashes",
  "bincode",
  "bytemuck",
  "serde",
@@ -2986,7 +2999,6 @@ dependencies = [
  "solana-hash",
  "solana-instruction",
  "solana-pubkey",
- "solana-slot-hashes",
 ]
 
 [[package]]
@@ -3679,6 +3691,7 @@ dependencies = [
  "badchain-last-restart-slot",
  "badchain-rent",
  "badchain-sdk-ids",
+ "badchain-slot-hashes",
  "badchain-sysvar",
  "badchain-sysvar-id",
  "bincode",
@@ -3724,7 +3737,6 @@ dependencies = [
  "solana-serialize-utils",
  "solana-sha256-hasher",
  "solana-short-vec",
- "solana-slot-hashes",
  "solana-slot-history",
  "solana-stable-layout",
  "thiserror 2.0.12",
@@ -4046,18 +4058,6 @@ dependencies = [
  "solana-pubkey",
  "solana-signature",
  "solana-transaction-error",
-]
-
-[[package]]
-name = "solana-slot-hashes"
-version = "2.2.1"
-dependencies = [
- "badchain-sdk-ids",
- "badchain-sysvar-id",
- "serde",
- "serde_derive",
- "solana-hash",
- "solana-sha256-hasher",
 ]
 
 [[package]]

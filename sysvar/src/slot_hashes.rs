@@ -60,8 +60,8 @@ const SYSVAR_LEN: usize = 20_488; // golden, update if MAX_ENTRIES changes
 
 pub use {
     badchain_sdk_ids::sysvar::slot_hashes::{check_id, id, ID},
+    badchain_slot_hashes::SlotHashes,
     badchain_sysvar_id::SysvarId,
-    solana_slot_hashes::SlotHashes,
 };
 
 #[cfg(feature = "bincode")]
@@ -210,7 +210,7 @@ impl SlotHashesSysvar {
 
 #[cfg(feature = "bytemuck")]
 fn get_pod_slot_hashes() -> Result<Vec<PodSlotHash>, solana_program_error::ProgramError> {
-    let mut pod_hashes = vec![PodSlotHash::default(); solana_slot_hashes::MAX_ENTRIES];
+    let mut pod_hashes = vec![PodSlotHash::default(); badchain_slot_hashes::MAX_ENTRIES];
     {
         let data = bytemuck::try_cast_slice_mut::<PodSlotHash, u8>(&mut pod_hashes)
             .map_err(|_| solana_program_error::ProgramError::InvalidAccountData)?;
@@ -230,8 +230,8 @@ fn get_pod_slot_hashes() -> Result<Vec<PodSlotHash>, solana_program_error::Progr
 #[cfg(test)]
 mod tests {
     use {
-        super::*, crate::tests::mock_get_sysvar_syscall, serial_test::serial, solana_hash::Hash,
-        solana_sha256_hasher::hash, solana_slot_hashes::MAX_ENTRIES, test_case::test_case,
+        super::*, crate::tests::mock_get_sysvar_syscall, badchain_slot_hashes::MAX_ENTRIES,
+        serial_test::serial, solana_hash::Hash, solana_sha256_hasher::hash, test_case::test_case,
     };
 
     #[test]

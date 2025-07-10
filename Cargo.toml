@@ -290,7 +290,7 @@ solana-short-vec = { path = "short-vec", version = "2.2.1" }
 solana-shred-version = { path = "shred-version", version = "2.2.1" }
 solana-signature = { path = "signature", version = "2.3.0", default-features = false }
 solana-signer = { path = "signer", version = "2.2.1" }
-solana-slot-hashes = { path = "slot-hashes", version = "2.2.1" }
+badchain-slot-hashes = { path = "slot-hashes", version = "2.2.1" }
 badchain-bad-addresses = {path = "bad-addresses",version = "0.0.1"}
 badchain-raffle-649 = {path = "raffle-649",version = "0.0.1"}
 solana-slot-history = { path = "slot-history", version = "2.2.1" }

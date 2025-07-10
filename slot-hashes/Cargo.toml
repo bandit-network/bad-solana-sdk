@@ -1,5 +1,5 @@
 [package]
-name = "solana-slot-hashes"
+name = "badchain-slot-hashes"
 description = "Types and utilities for the Solana SlotHashes sysvar."
 documentation = "https://docs.rs/solana-slot-hashes"
 version = "2.2.1"

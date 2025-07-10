@@ -239,8 +239,8 @@ fn get_pod_bad_addresses() -> Result<Vec<PodBadAddress>, solana_program_error::P
 #[cfg(test)]
 mod tests {
     use {
-        super::*, crate::tests::mock_get_sysvar_syscall, serial_test::serial,
-        solana_slot_hashes::MAX_ENTRIES, test_case::test_case,
+        super::*, crate::tests::mock_get_sysvar_syscall, badchain_slot_hashes::MAX_ENTRIES,
+        serial_test::serial, test_case::test_case,
     };
 
     #[test]
