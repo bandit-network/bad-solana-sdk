@@ -1,5 +1,5 @@
 [package]
-name = "badchain-account"
+name = "solana-account"
 description = "Solana Account type"
 documentation = "https://docs.rs/solana-account"
 version = "2.2.1"
@@ -52,4 +52,4 @@ badchain-sdk-ids = { workspace = true }
 badchain-sysvar = { workspace = true, features = ["bincode"], optional = true }
 
 [dev-dependencies]
-badchain-account = { path = ".", features = ["dev-context-only-utils"] }
+solana-account = { path = ".", features = ["dev-context-only-utils"] }

@@ -3,11 +3,11 @@
 #![cfg_attr(feature = "frozen-abi", feature(min_specialization))]
 
 use {
-    badchain_account::{AccountSharedData, ReadableAccount, WritableAccount},
     badchain_clock::Epoch,
     badchain_epoch_schedule::EpochSchedule,
     badchain_rent::{Rent, RentDue},
     badchain_sdk_ids::incinerator,
+    solana_account::{AccountSharedData, ReadableAccount, WritableAccount},
     solana_genesis_config::GenesisConfig,
     solana_pubkey::Pubkey,
 };
@@ -219,8 +219,7 @@ impl std::ops::AddAssign for CollectedInfo {
 #[cfg(test)]
 mod tests {
     use {
-        super::*, assert_matches::assert_matches, badchain_account::Account,
-        badchain_sdk_ids::sysvar,
+        super::*, assert_matches::assert_matches, badchain_sdk_ids::sysvar, solana_account::Account,
     };
 
     fn default_rent_collector_clone_with_epoch(epoch: Epoch) -> RentCollector {

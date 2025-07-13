@@ -26,7 +26,7 @@ serde = [
 [dependencies]
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-badchain-account = { workspace = true }
+solana-account = { workspace = true }
 badchain-clock = { workspace = true }
 badchain-epoch-schedule = { workspace = true }
 solana-frozen-abi = { workspace = true, optional = true }

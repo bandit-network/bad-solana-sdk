@@ -109,7 +109,7 @@ pub mod solana_rpc_client_nonce_utils {
     }
 }
 
-pub mod badchain_account {
+pub mod solana_account {
     use {badchain_clock::Epoch, solana_pubkey::Pubkey};
     #[derive(Clone)]
     pub struct Account {
@@ -276,7 +276,7 @@ pub mod solana_transaction {
 pub mod solana_sdk {
     pub use {
         crate::{
-            badchain_account::{self as account, state_traits as account_utils},
+            solana_account::{self as account, state_traits as account_utils},
             solana_signer::{self as signer, signers},
         },
         badchain_clock::Clock,

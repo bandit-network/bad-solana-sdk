@@ -8,7 +8,7 @@
 //! them but without waiting to see if the server accepted it.
 
 use {
-    badchain_account::Account,
+    solana_account::Account,
     solana_commitment_config::CommitmentConfig,
     solana_epoch_info::EpochInfo,
     solana_hash::Hash,

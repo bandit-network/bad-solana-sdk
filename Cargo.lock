@@ -272,12 +272,12 @@ name = "bad-solana-sdk"
 version = "2.2.2"
 dependencies = [
  "bad-solana-sdk",
- "badchain-account",
  "badchain-sdk-ids",
  "bincode",
  "bs58",
  "getrandom 0.1.16",
  "serde",
+ "solana-account",
  "solana-derivation-path",
  "solana-epoch-info",
  "solana-epoch-rewards-hasher",
@@ -307,27 +307,6 @@ dependencies = [
  "solana-transaction",
  "solana-transaction-error",
  "thiserror 2.0.12",
-]
-
-[[package]]
-name = "badchain-account"
-version = "2.2.1"
-dependencies = [
- "badchain-account",
- "badchain-clock",
- "badchain-sdk-ids",
- "badchain-sysvar",
- "bincode",
- "qualifier_attr",
- "serde",
- "serde_bytes",
- "serde_derive",
- "solana-account-info 2.3.0",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
- "solana-instruction",
- "solana-logger",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -434,13 +413,13 @@ name = "badchain-rent-collector"
 version = "2.2.1"
 dependencies = [
  "assert_matches",
- "badchain-account",
  "badchain-clock",
  "badchain-epoch-schedule",
  "badchain-rent",
  "badchain-sdk-ids",
  "serde",
  "serde_derive",
+ "solana-account",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-genesis-config",
@@ -3006,6 +2985,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-account"
+version = "2.2.1"
+dependencies = [
+ "badchain-clock",
+ "badchain-sdk-ids",
+ "badchain-sysvar",
+ "bincode",
+ "qualifier_attr",
+ "serde",
+ "serde_bytes",
+ "serde_derive",
+ "solana-account",
+ "solana-account-info 2.3.0",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-instruction",
+ "solana-logger",
+ "solana-pubkey",
+]
+
+[[package]]
 name = "solana-account-info"
 version = "2.3.0"
 dependencies = [
@@ -3159,7 +3159,7 @@ dependencies = [
 name = "solana-client-traits"
 version = "2.2.1"
 dependencies = [
- "badchain-account",
+ "solana-account",
  "solana-commitment-config",
  "solana-epoch-info",
  "solana-hash 2.3.0",
@@ -3341,12 +3341,12 @@ dependencies = [
 name = "solana-feature-gate-interface"
 version = "2.2.2"
 dependencies = [
- "badchain-account",
  "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
  "serde",
  "serde_derive",
+ "solana-account",
  "solana-account-info 2.3.0",
  "solana-feature-gate-interface",
  "solana-instruction",
@@ -3437,7 +3437,6 @@ dependencies = [
 name = "solana-genesis-config"
 version = "2.3.0"
 dependencies = [
- "badchain-account",
  "badchain-clock",
  "badchain-epoch-schedule",
  "badchain-rent",
@@ -3447,6 +3446,7 @@ dependencies = [
  "memmap2",
  "serde",
  "serde_derive",
+ "solana-account",
  "solana-cluster-type",
  "solana-fee-calculator 2.2.1",
  "solana-frozen-abi",
@@ -3750,8 +3750,8 @@ dependencies = [
 name = "solana-nonce-account"
 version = "2.2.1"
 dependencies = [
- "badchain-account",
  "badchain-sdk-ids",
+ "solana-account",
  "solana-fee-calculator 2.2.1",
  "solana-hash 2.3.0",
  "solana-nonce",
