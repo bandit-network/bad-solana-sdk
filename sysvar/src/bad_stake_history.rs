@@ -3,8 +3,9 @@
 //! [sv]: https://docs.solanalabs.com/runtime/sysvars#stakehistory
 
 pub use badchain_clock::Epoch;
-use {badchain_sysvar_id::declare_sysvar_id, std::ops::Deref};
+use solana_stake_interface::stake_history::StakeHistory as SolanaStakeHistory;
 
+use {badchain_sysvar_id::declare_sysvar_id, std::ops::Deref};
 pub const MAX_ENTRIES: usize = 512; // it should never take as many as 512 epochs to warm up or cool down
 
 #[repr(C)]
@@ -99,6 +100,41 @@ impl StakeHistoryGetEntry for StakeHistory {
         self.binary_search_by(|probe| epoch.cmp(&probe.0))
             .ok()
             .map(|index| self[index].1.clone())
+    }
+}
+
+/// Convert an owned Badchain `StakeHistory` into the upstream Solana one
+impl From<StakeHistory> for SolanaStakeHistory {
+    fn from(src: StakeHistory) -> Self {
+        // We know both types serialize identically: a bincode Vec<(Epoch, Entry)>.
+        // Serialize the vendored type, then deserialize into the Solana type.
+        let bytes = bincode::serialize(&src).expect("failed to serialize StakeHistory");
+        bincode::deserialize(&bytes).expect("failed to deserialize into SolanaStakeHistory")
+    }
+}
+
+/// Convert a borrowed Badchain `&StakeHistory` into the upstream Solana one
+impl From<&StakeHistory> for SolanaStakeHistory {
+    fn from(src: &StakeHistory) -> Self {
+        let bytes = bincode::serialize(src).expect("failed to serialize StakeHistory");
+        bincode::deserialize(&bytes).expect("failed to deserialize into SolanaStakeHistory")
+    }
+}
+
+/// Convert an owned Solana `StakeHistory` into your vendored `BadStakeHistory`
+impl From<SolanaStakeHistory> for StakeHistory {
+    fn from(src: SolanaStakeHistory) -> Self {
+        // They share the same bincode layout (Vec<(Epoch, Entry)>), so round-trip:
+        let bytes = bincode::serialize(&src).expect("serialize SolanaStakeHistory");
+        bincode::deserialize(&bytes).expect("deserialize into StakeHistory")
+    }
+}
+
+/// Convert a borrowed `&SolanaStakeHistory` into your vendored `StakeHistory`
+impl From<&SolanaStakeHistory> for StakeHistory {
+    fn from(src: &SolanaStakeHistory) -> Self {
+        let bytes = bincode::serialize(src).expect("serialize &SolanaStakeHistory");
+        bincode::deserialize(&bytes).expect("deserialize into StakeHistory")
     }
 }
 

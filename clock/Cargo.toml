@@ -24,6 +24,7 @@ serde_derive = { workspace = true, optional = true }
 badchain-sdk-ids = { workspace = true, optional = true }
 solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
+solana-clock = { workspace = true }
 
 [dev-dependencies]
 badchain-clock = { path = ".", features = ["sysvar"] }

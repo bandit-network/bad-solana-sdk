@@ -2,7 +2,7 @@
 name = "badchain-epoch-schedule"
 description = "Configuration for Solana epochs and slots."
 documentation = "https://docs.rs/solana-epoch-schedule"
-version = "2.2.1"
+version = "2.2.2"
 authors = { workspace = true }
 repository = { workspace = true }
 homepage = { workspace = true }
@@ -25,6 +25,7 @@ solana-frozen-abi-macro = { workspace = true, optional = true }
 badchain-sdk-ids = { workspace = true, optional = true }
 solana-sdk-macro = { workspace = true }
 badchain-sysvar-id = { workspace = true, optional = true }
+solana-epoch-schedule = { workspace = true }
 
 [dev-dependencies]
 badchain-clock = { workspace = true }

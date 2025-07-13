@@ -67,12 +67,12 @@ pub mod transaction;
 pub mod transport;
 
 #[deprecated(since = "2.1.0", note = "Use `solana-account` crate instead")]
-pub use solana_account as account;
+pub use badchain_account as account;
 #[deprecated(
     since = "2.1.0",
-    note = "Use `solana_account::state_traits` crate instead"
+    note = "Use `badchain_account::state_traits` crate instead"
 )]
-pub use solana_account::state_traits as account_utils;
+pub use badchain_account::state_traits as account_utils;
 #[deprecated(since = "2.2.0", note = "Use `solana-epoch-info` crate instead")]
 pub use solana_epoch_info as epoch_info;
 #[deprecated(

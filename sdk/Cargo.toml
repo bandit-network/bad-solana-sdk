@@ -44,12 +44,12 @@ full = [
 ]
 borsh = ["solana-program/borsh"]
 dev-context-only-utils = [
-    "solana-account/dev-context-only-utils",
+    "badchain-account/dev-context-only-utils",
     "solana-transaction/dev-context-only-utils",
 ]
 frozen-abi = [
     "solana-fee-structure/frozen-abi",
-    "solana-account/frozen-abi",
+    "badchain-account/frozen-abi",
     "solana-inflation/frozen-abi",
     "solana-program/frozen-abi",
     "solana-short-vec/frozen-abi",
@@ -62,7 +62,7 @@ frozen-abi = [
 bincode = { workspace = true }
 bs58 = { workspace = true }
 serde = { workspace = true }
-solana-account = { workspace = true, features = ["bincode"] }
+badchain-account = { workspace = true, features = ["bincode"] }
 solana-derivation-path = { workspace = true }
 solana-epoch-info = { workspace = true, features = ["serde"] }
 solana-epoch-rewards-hasher = { workspace = true }

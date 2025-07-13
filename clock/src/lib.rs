@@ -27,6 +27,7 @@ pub mod sysvar;
 
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
+use solana_clock::Clock as SolanaClock;
 use solana_sdk_macro::CloneZeroed;
 
 /// The default tick rate that the cluster attempts to achieve (160 per second).
@@ -206,7 +207,33 @@ pub struct Clock {
     /// [oracle]: https://docs.solanalabs.com/implemented-proposals/validator-timestamp-oracle
     pub unix_timestamp: UnixTimestamp,
 }
+// … all your existing constants, types, tests, etc. …
 
+/// Convert from the on-chain/sysvar `Clock` to your local Badchain `Clock`
+impl From<SolanaClock> for Clock {
+    fn from(src: SolanaClock) -> Self {
+        Clock {
+            slot: src.slot,
+            epoch_start_timestamp: src.epoch_start_timestamp,
+            epoch: src.epoch,
+            leader_schedule_epoch: src.leader_schedule_epoch,
+            unix_timestamp: src.unix_timestamp,
+        }
+    }
+}
+
+/// (Optionally) the reverse conversion, if you ever need it:
+impl From<Clock> for SolanaClock {
+    fn from(src: Clock) -> Self {
+        SolanaClock {
+            slot: src.slot,
+            epoch_start_timestamp: src.epoch_start_timestamp,
+            epoch: src.epoch,
+            leader_schedule_epoch: src.leader_schedule_epoch,
+            unix_timestamp: src.unix_timestamp,
+        }
+    }
+}
 #[cfg(test)]
 mod tests {
     use super::*;

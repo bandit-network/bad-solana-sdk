@@ -10,11 +10,11 @@ pub use solana_cluster_type::ClusterType;
 #[cfg(feature = "frozen-abi")]
 use solana_frozen_abi_macro::{frozen_abi, AbiExample};
 use {
+    badchain_account::{Account, AccountSharedData},
     badchain_clock::{UnixTimestamp, DEFAULT_TICKS_PER_SLOT},
     badchain_epoch_schedule::EpochSchedule,
     badchain_rent::Rent,
     badchain_sdk_ids::system_program,
-    solana_account::{Account, AccountSharedData},
     solana_fee_calculator::FeeRateGovernor,
     solana_inflation::Inflation,
     solana_keypair::Keypair,

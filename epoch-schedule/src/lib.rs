@@ -24,6 +24,8 @@ pub mod sysvar;
 use serde_derive::{Deserialize, Serialize};
 use solana_sdk_macro::CloneZeroed;
 
+use solana_epoch_schedule::EpochSchedule as SolanaEpochSchedule;
+
 // inlined to avoid badchain_clock dep
 const DEFAULT_SLOTS_PER_EPOCH: u64 = 432_000;
 #[cfg(test)]
@@ -203,6 +205,32 @@ impl EpochSchedule {
         self.get_first_slot_in_epoch(epoch)
             .saturating_add(self.get_slots_in_epoch(epoch))
             .saturating_sub(1)
+    }
+}
+
+/// Convert from the on-chain/sysvar `EpochSchedule` into your local type
+impl From<SolanaEpochSchedule> for EpochSchedule {
+    fn from(src: SolanaEpochSchedule) -> Self {
+        EpochSchedule {
+            slots_per_epoch: src.slots_per_epoch,
+            leader_schedule_slot_offset: src.leader_schedule_slot_offset,
+            warmup: src.warmup,
+            first_normal_epoch: src.first_normal_epoch,
+            first_normal_slot: src.first_normal_slot,
+        }
+    }
+}
+
+/// (Optionally) the reverse conversion, if you ever need it:
+impl From<EpochSchedule> for SolanaEpochSchedule {
+    fn from(src: EpochSchedule) -> Self {
+        SolanaEpochSchedule {
+            slots_per_epoch: src.slots_per_epoch,
+            leader_schedule_slot_offset: src.leader_schedule_slot_offset,
+            warmup: src.warmup,
+            first_normal_epoch: src.first_normal_epoch,
+            first_normal_slot: src.first_normal_slot,
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 //! Functions related to nonce accounts.
 
 use {
+    badchain_account::{state_traits::StateMut, AccountSharedData, ReadableAccount},
     badchain_sdk_ids::system_program,
-    solana_account::{state_traits::StateMut, AccountSharedData, ReadableAccount},
     solana_hash::Hash,
     solana_nonce::{
         state::{Data, State},
