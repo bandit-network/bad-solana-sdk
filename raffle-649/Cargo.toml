@@ -1,0 +1,29 @@
+[package]
+name = "badchain-raffle-649"
+description = "Raffle 649"
+documentation = "https://docs.rs/solana-clock"
+version = "0.0.1"
+authors = { workspace = true }
+repository = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+edition = { workspace = true }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+all-features = true
+rustdoc-args = ["--cfg=docsrs"]
+
+[features]
+serde = ["dep:serde", "dep:serde_derive"]
+
+[dependencies]
+serde = { workspace = true, optional = true }
+serde_derive = { workspace = true, optional = true }
+solana-sdk-macro = { workspace = true }
+solana-clock = { workspace = true }
+solana-sdk={workspace = true}
+
+
+[dev-dependencies]
+static_assertions = { workspace = true }
