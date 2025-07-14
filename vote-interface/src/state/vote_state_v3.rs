@@ -15,9 +15,9 @@ use {
         authorized_voters::AuthorizedVoters, error::VoteError, state::DEFAULT_PRIOR_VOTERS_OFFSET,
     },
     badchain_clock::{Clock, Epoch, Slot, UnixTimestamp},
+    badchain_pubkey::Pubkey,
     badchain_rent::Rent,
     solana_instruction::error::InstructionError,
-    solana_pubkey::Pubkey,
     std::{collections::VecDeque, fmt::Debug},
 };
 
@@ -608,8 +608,8 @@ mod vote_state_deserialize {
             },
         },
         badchain_clock::Epoch,
+        badchain_pubkey::Pubkey,
         solana_instruction::error::InstructionError,
-        solana_pubkey::Pubkey,
         solana_serialize_utils::cursor::{
             read_bool, read_i64, read_option_u64, read_pubkey, read_pubkey_into, read_u32,
             read_u64, read_u8,

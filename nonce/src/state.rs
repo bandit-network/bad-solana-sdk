@@ -1,7 +1,7 @@
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
 use {
-    solana_fee_calculator::FeeCalculator, solana_hash::Hash, solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey, solana_fee_calculator::FeeCalculator, solana_hash::Hash,
     solana_sha256_hasher::hashv,
 };
 

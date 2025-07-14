@@ -12,10 +12,10 @@ use serde::ser::{Serialize, Serializer};
 use solana_frozen_abi_macro::{frozen_abi, AbiExample};
 use {
     badchain_clock::{Epoch, INITIAL_RENT_EPOCH},
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::{bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, loader_v4},
     solana_account_info::{debug_account_data::*, AccountInfo},
     solana_instruction::error::LamportsError,
-    solana_pubkey::Pubkey,
     std::{
         cell::{Ref, RefCell},
         fmt,
@@ -63,8 +63,8 @@ mod account_serialize {
     use {
         crate::ReadableAccount,
         badchain_clock::Epoch,
+        badchain_pubkey::Pubkey,
         serde::{ser::Serializer, Serialize},
-        solana_pubkey::Pubkey,
     };
     #[repr(C)]
     #[cfg_attr(
@@ -182,6 +182,31 @@ impl From<Account> for AccountSharedData {
     }
 }
 
+/// Owned SolanaRpcAccount → BadchainAccount
+impl From<solana_account::Account> for Account {
+    fn from(src: solana_account::Account) -> Self {
+        Account {
+            lamports: src.lamports,
+            data: src.data,
+            owner: src.owner.into(), // requires From<SolanaPubkey> for your Pubkey
+            executable: src.executable,
+            rent_epoch: src.rent_epoch as Epoch,
+        }
+    }
+}
+
+/// Borrowed `&solana_account::Account` → Account
+impl From<&solana_account::Account> for Account {
+    fn from(src: &solana_account::Account) -> Self {
+        Account {
+            lamports: src.lamports,
+            data: src.data.clone(),
+            owner: src.owner.into(),
+            executable: src.executable,
+            rent_epoch: src.rent_epoch as Epoch,
+        }
+    }
+}
 pub trait WritableAccount: ReadableAccount {
     fn set_lamports(&mut self, lamports: u64);
     fn checked_add_lamports(&mut self, lamports: u64) -> Result<(), LamportsError> {

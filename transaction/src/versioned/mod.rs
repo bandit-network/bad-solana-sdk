@@ -231,11 +231,11 @@ impl VersionedTransaction {
 mod tests {
     use {
         super::*,
+        badchain_pubkey::Pubkey,
         solana_hash::Hash,
         solana_instruction::{AccountMeta, Instruction},
         solana_keypair::Keypair,
         solana_message::Message as LegacyMessage,
-        solana_pubkey::Pubkey,
         solana_signer::Signer,
         solana_system_interface::instruction as system_instruction,
     };

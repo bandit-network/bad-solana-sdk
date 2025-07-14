@@ -3,9 +3,9 @@
 #[cfg(target_arch = "wasm32")]
 use wasm_bindgen::prelude::*;
 use {
+    badchain_pubkey::Pubkey,
     ed25519_dalek::Signer as DalekSigner,
     rand0_7::{rngs::OsRng, CryptoRng, RngCore},
-    solana_pubkey::Pubkey,
     solana_seed_phrase::generate_seed_from_seed_phrase_and_passphrase,
     solana_signature::{error::Error as SignatureError, Signature},
     solana_signer::{EncodableKey, EncodableKeypair, Signer, SignerError},

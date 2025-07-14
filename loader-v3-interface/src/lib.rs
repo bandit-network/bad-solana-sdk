@@ -17,7 +17,7 @@
 //!
 //! [`instruction`]: crate::instruction
 
-use solana_pubkey::Pubkey;
+use badchain_pubkey::Pubkey;
 
 pub mod instruction;
 pub mod state;

@@ -13,7 +13,7 @@ use rand::seq::SliceRandom;
 use rand::thread_rng;
 
 use {
-    solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey,
     std::{
         iter::FromIterator,
         ops::Deref,

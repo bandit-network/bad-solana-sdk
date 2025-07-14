@@ -177,8 +177,8 @@ impl FromStr for Signature {
 mod tests {
     use {
         super::*,
+        badchain_pubkey::Pubkey,
         serde_derive::{Deserialize, Serialize},
-        solana_pubkey::Pubkey,
     };
 
     #[test]

@@ -7,8 +7,8 @@ use {
         VoteStateUpdate, VoteStateVersions,
     },
     badchain_clock::{Slot, UnixTimestamp},
+    badchain_pubkey::Pubkey,
     solana_hash::Hash,
-    solana_pubkey::Pubkey,
 };
 #[cfg(feature = "bincode")]
 use {

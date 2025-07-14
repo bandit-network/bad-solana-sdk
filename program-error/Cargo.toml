@@ -27,7 +27,7 @@ solana-instruction = { workspace = true, default-features = false, features = [
     "std",
 ] }
 solana-msg = { workspace = true }
-solana-pubkey = { workspace = true, default-features = false }
+badchain-pubkey = { workspace = true, default-features = false }
 
 [dev-dependencies]
 num_enum = { workspace = true }

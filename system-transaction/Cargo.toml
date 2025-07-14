@@ -16,7 +16,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 solana-hash = { workspace = true }
 solana-keypair = { workspace = true }
 solana-message = { workspace = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 solana-signer = { workspace = true }
 solana-system-interface = { workspace = true, features = ["bincode"] }
 solana-transaction = { workspace = true, features = ["bincode"] }

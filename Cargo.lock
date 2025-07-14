@@ -272,12 +272,13 @@ name = "bad-solana-sdk"
 version = "2.2.2"
 dependencies = [
  "bad-solana-sdk",
+ "badchain-account",
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "bincode",
  "bs58",
  "getrandom 0.1.16",
  "serde",
- "solana-account",
  "solana-derivation-path",
  "solana-epoch-info",
  "solana-epoch-rewards-hasher",
@@ -292,7 +293,6 @@ dependencies = [
  "solana-presigner",
  "solana-program",
  "solana-program-memory 2.3.1",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
  "solana-sdk-macro 2.2.1",
  "solana-seed-derivable",
@@ -310,17 +310,39 @@ dependencies = [
 ]
 
 [[package]]
+name = "badchain-account"
+version = "2.2.1"
+dependencies = [
+ "badchain-account",
+ "badchain-clock",
+ "badchain-pubkey",
+ "badchain-sdk-ids",
+ "badchain-sysvar",
+ "bincode",
+ "qualifier_attr",
+ "serde",
+ "serde_bytes",
+ "serde_derive",
+ "solana-account",
+ "solana-account-info 2.3.0",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-instruction",
+ "solana-logger",
+]
+
+[[package]]
 name = "badchain-bad-addresses"
 version = "0.0.1"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "badchain-sysvar-id",
  "rand 0.8.5",
  "serde",
  "serde_derive",
  "solana-hash 2.3.0",
- "solana-pubkey",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
 ]
 
 [[package]]
@@ -381,6 +403,40 @@ dependencies = [
 ]
 
 [[package]]
+name = "badchain-pubkey"
+version = "2.4.0"
+dependencies = [
+ "anyhow",
+ "arbitrary",
+ "badchain-pubkey",
+ "borsh 0.10.4",
+ "borsh 1.5.5",
+ "bs58",
+ "bytemuck",
+ "bytemuck_derive",
+ "curve25519-dalek 4.1.3",
+ "five8",
+ "five8_const",
+ "getrandom 0.2.15",
+ "js-sys",
+ "num-traits",
+ "rand 0.8.5",
+ "serde",
+ "serde_derive",
+ "solana-atomic-u64 2.2.1",
+ "solana-define-syscall 2.3.0",
+ "solana-frozen-abi",
+ "solana-frozen-abi-macro",
+ "solana-program",
+ "solana-pubkey",
+ "solana-sanitize 2.2.1",
+ "solana-sha256-hasher 2.2.1",
+ "strum",
+ "strum_macros",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "badchain-raffle-649"
 version = "0.0.1"
 dependencies = [
@@ -413,25 +469,25 @@ name = "badchain-rent-collector"
 version = "2.2.1"
 dependencies = [
  "assert_matches",
+ "badchain-account",
  "badchain-clock",
  "badchain-epoch-schedule",
+ "badchain-pubkey",
  "badchain-rent",
  "badchain-sdk-ids",
  "serde",
  "serde_derive",
- "solana-account",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-genesis-config",
  "solana-logger",
- "solana-pubkey",
 ]
 
 [[package]]
 name = "badchain-sdk-ids"
 version = "2.2.1"
 dependencies = [
- "solana-pubkey",
+ "badchain-pubkey",
 ]
 
 [[package]]
@@ -443,7 +499,7 @@ dependencies = [
  "serde",
  "serde_derive",
  "solana-hash 2.3.0",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
 ]
 
 [[package]]
@@ -468,6 +524,7 @@ dependencies = [
  "badchain-epoch-rewards",
  "badchain-epoch-schedule",
  "badchain-last-restart-slot",
+ "badchain-pubkey",
  "badchain-raffle-649",
  "badchain-rent",
  "badchain-sdk-ids",
@@ -498,10 +555,9 @@ dependencies = [
  "solana-program-entrypoint 2.3.0",
  "solana-program-error",
  "solana-program-memory 2.3.1",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
  "solana-sdk-macro 2.2.1",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-stake-interface",
  "solana-sysvar",
  "test-case",
@@ -511,8 +567,8 @@ dependencies = [
 name = "badchain-sysvar-id"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -2987,33 +3043,25 @@ dependencies = [
 [[package]]
 name = "solana-account"
 version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0f949fe4edaeaea78c844023bfc1c898e0b1f5a100f8a8d2d0f85d0a7b090258"
 dependencies = [
- "badchain-clock",
- "badchain-sdk-ids",
- "badchain-sysvar",
- "bincode",
- "qualifier_attr",
- "serde",
- "serde_bytes",
- "serde_derive",
- "solana-account",
- "solana-account-info 2.3.0",
- "solana-frozen-abi",
- "solana-frozen-abi-macro",
+ "solana-account-info 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "solana-clock",
  "solana-instruction",
- "solana-logger",
  "solana-pubkey",
+ "solana-sdk-ids",
 ]
 
 [[package]]
 name = "solana-account-info"
 version = "2.3.0"
 dependencies = [
+ "badchain-pubkey",
  "bincode",
  "serde",
  "solana-program-error",
  "solana-program-memory 2.3.1",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3032,6 +3080,7 @@ name = "solana-address-lookup-table-interface"
 version = "2.2.2"
 dependencies = [
  "badchain-clock",
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "badchain-slot-hashes",
  "bincode",
@@ -3043,7 +3092,6 @@ dependencies = [
  "solana-frozen-abi-macro",
  "solana-hash 2.3.0",
  "solana-instruction",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3082,7 +3130,7 @@ dependencies = [
  "bincode",
  "serde",
  "solana-instruction",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
 ]
 
 [[package]]
@@ -3159,17 +3207,17 @@ dependencies = [
 name = "solana-client-traits"
 version = "2.2.1"
 dependencies = [
- "solana-account",
+ "badchain-account",
+ "badchain-pubkey",
  "solana-commitment-config",
  "solana-epoch-info",
  "solana-hash 2.3.0",
  "solana-instruction",
  "solana-keypair",
  "solana-message",
- "solana-pubkey",
  "solana-signature",
  "solana-signer",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "solana-transaction",
  "solana-transaction-error",
 ]
@@ -3223,15 +3271,15 @@ dependencies = [
 name = "solana-cpi"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "solana-account-info 2.3.0",
  "solana-define-syscall 2.3.0",
  "solana-instruction",
  "solana-program-entrypoint 2.3.0",
  "solana-program-error",
- "solana-pubkey",
  "solana-stable-layout",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "static_assertions",
 ]
 
@@ -3300,9 +3348,9 @@ dependencies = [
 name = "solana-epoch-rewards-hasher"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "siphasher",
  "solana-hash 2.3.0",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3323,6 +3371,7 @@ name = "solana-example-mocks"
 version = "2.2.1"
 dependencies = [
  "badchain-clock",
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "serde",
  "serde_derive",
@@ -3332,8 +3381,7 @@ dependencies = [
  "solana-keccak-hasher",
  "solana-message",
  "solana-nonce",
- "solana-pubkey",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "thiserror 2.0.12",
 ]
 
@@ -3341,18 +3389,18 @@ dependencies = [
 name = "solana-feature-gate-interface"
 version = "2.2.2"
 dependencies = [
+ "badchain-account",
+ "badchain-pubkey",
  "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
  "serde",
  "serde_derive",
- "solana-account",
  "solana-account-info 2.3.0",
  "solana-feature-gate-interface",
  "solana-instruction",
  "solana-program-error",
- "solana-pubkey",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
 ]
 
 [[package]]
@@ -3437,8 +3485,10 @@ dependencies = [
 name = "solana-genesis-config"
 version = "2.3.0"
 dependencies = [
+ "badchain-account",
  "badchain-clock",
  "badchain-epoch-schedule",
+ "badchain-pubkey",
  "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
@@ -3446,7 +3496,6 @@ dependencies = [
  "memmap2",
  "serde",
  "serde_derive",
- "solana-account",
  "solana-cluster-type",
  "solana-fee-calculator 2.2.1",
  "solana-frozen-abi",
@@ -3457,8 +3506,7 @@ dependencies = [
  "solana-keypair",
  "solana-logger",
  "solana-poh-config",
- "solana-pubkey",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-shred-version",
  "solana-signer",
  "solana-time-utils",
@@ -3524,6 +3572,7 @@ dependencies = [
 name = "solana-instruction"
 version = "2.3.0"
 dependencies = [
+ "badchain-pubkey",
  "bincode",
  "borsh 1.5.5",
  "getrandom 0.2.15",
@@ -3535,7 +3584,6 @@ dependencies = [
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-instruction",
- "solana-pubkey",
  "wasm-bindgen",
 ]
 
@@ -3543,6 +3591,7 @@ dependencies = [
 name = "solana-instructions-sysvar"
 version = "2.2.2"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "badchain-sysvar-id",
  "bitflags 2.8.0",
@@ -3550,7 +3599,6 @@ dependencies = [
  "solana-account-info 2.3.0",
  "solana-instruction",
  "solana-program-error",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
  "solana-serialize-utils 2.2.1",
 ]
@@ -3591,13 +3639,13 @@ dependencies = [
 name = "solana-keypair"
 version = "2.2.3"
 dependencies = [
+ "badchain-pubkey",
  "ed25519-dalek",
  "ed25519-dalek-bip32",
  "five8",
  "rand 0.7.3",
  "serde_json",
  "solana-derivation-path",
- "solana-pubkey",
  "solana-seed-derivable",
  "solana-seed-phrase",
  "solana-signature",
@@ -3624,18 +3672,19 @@ dependencies = [
 name = "solana-loader-v2-interface"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "serde",
  "serde_bytes",
  "serde_derive",
  "solana-instruction",
- "solana-pubkey",
 ]
 
 [[package]]
 name = "solana-loader-v3-interface"
 version = "5.0.0"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "bincode",
  "serde",
@@ -3645,14 +3694,14 @@ dependencies = [
  "solana-frozen-abi-macro",
  "solana-instruction",
  "solana-loader-v3-interface",
- "solana-pubkey",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
 ]
 
 [[package]]
 name = "solana-loader-v4-interface"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "memoffset",
  "serde",
@@ -3662,8 +3711,7 @@ dependencies = [
  "solana-frozen-abi-macro",
  "solana-instruction",
  "solana-loader-v4-interface",
- "solana-pubkey",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
 ]
 
 [[package]]
@@ -3682,6 +3730,7 @@ name = "solana-message"
 version = "2.4.0"
 dependencies = [
  "anyhow",
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "badchain-sysvar",
  "bincode",
@@ -3702,11 +3751,10 @@ dependencies = [
  "solana-message",
  "solana-nonce",
  "solana-program",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-short-vec",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "solana-transaction-error",
  "static_assertions",
  "wasm-bindgen",
@@ -3736,40 +3784,40 @@ version = "2.3.0"
 name = "solana-nonce"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "bincode",
  "serde",
  "serde_derive",
  "solana-fee-calculator 2.2.1",
  "solana-hash 2.3.0",
  "solana-nonce",
- "solana-pubkey",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
 ]
 
 [[package]]
 name = "solana-nonce-account"
 version = "2.2.1"
 dependencies = [
+ "badchain-account",
+ "badchain-pubkey",
  "badchain-sdk-ids",
- "solana-account",
  "solana-fee-calculator 2.2.1",
  "solana-hash 2.3.0",
  "solana-nonce",
- "solana-pubkey",
 ]
 
 [[package]]
 name = "solana-offchain-message"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "num_enum",
  "solana-hash 2.3.0",
  "solana-keypair",
  "solana-offchain-message",
  "solana-packet",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-signature",
  "solana-signer",
  "static_assertions",
@@ -3779,8 +3827,8 @@ dependencies = [
 name = "solana-package-metadata"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "solana-package-metadata-macro",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3832,8 +3880,8 @@ dependencies = [
 name = "solana-presigner"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "solana-keypair",
- "solana-pubkey",
  "solana-signature",
  "solana-signer",
 ]
@@ -3847,6 +3895,7 @@ dependencies = [
  "badchain-epoch-rewards",
  "badchain-epoch-schedule",
  "badchain-last-restart-slot",
+ "badchain-pubkey",
  "badchain-rent",
  "badchain-sdk-ids",
  "badchain-slot-hashes",
@@ -3889,12 +3938,11 @@ dependencies = [
  "solana-program-memory 2.3.1",
  "solana-program-option",
  "solana-program-pack",
- "solana-pubkey",
  "solana-sdk-macro 2.2.1",
  "solana-secp256k1-recover",
  "solana-serde-varint",
  "solana-serialize-utils 2.2.1",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-short-vec",
  "solana-stable-layout",
  "thiserror 2.0.12",
@@ -3904,11 +3952,11 @@ dependencies = [
 name = "solana-program-entrypoint"
 version = "2.3.0"
 dependencies = [
+ "badchain-pubkey",
  "solana-account-info 2.3.0",
  "solana-define-syscall 2.3.0",
  "solana-msg 2.2.1",
  "solana-program-error",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3927,6 +3975,7 @@ dependencies = [
 name = "solana-program-error"
 version = "2.2.2"
 dependencies = [
+ "badchain-pubkey",
  "borsh 1.5.5",
  "num-traits",
  "num_enum",
@@ -3934,7 +3983,6 @@ dependencies = [
  "serde_derive",
  "solana-instruction",
  "solana-msg 2.2.1",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -3967,33 +4015,23 @@ dependencies = [
 [[package]]
 name = "solana-pubkey"
 version = "2.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b62adb9c3261a052ca1f999398c388f1daf558a1b492f60a6d9e64857db4ff1"
 dependencies = [
- "anyhow",
- "arbitrary",
- "borsh 0.10.4",
- "borsh 1.5.5",
- "bs58",
- "bytemuck",
- "bytemuck_derive",
- "curve25519-dalek 4.1.3",
  "five8",
  "five8_const",
  "getrandom 0.2.15",
  "js-sys",
  "num-traits",
- "rand 0.8.5",
  "serde",
  "serde_derive",
- "solana-atomic-u64 2.2.1",
- "solana-define-syscall 2.3.0",
+ "solana-atomic-u64 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "solana-decode-error",
+ "solana-define-syscall 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
- "solana-program",
- "solana-pubkey",
- "solana-sanitize 2.2.1",
- "solana-sha256-hasher",
- "strum",
- "strum_macros",
+ "solana-sanitize 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "solana-sha256-hasher 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "wasm-bindgen",
 ]
 
@@ -4021,7 +4059,7 @@ dependencies = [
 name = "solana-rent-debits"
 version = "2.2.1"
 dependencies = [
- "solana-pubkey",
+ "badchain-pubkey",
  "solana-reward-info",
 ]
 
@@ -4169,12 +4207,12 @@ dependencies = [
 name = "solana-serialize-utils"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "bincode",
  "borsh 1.5.5",
  "rand 0.8.5",
  "serde",
  "solana-instruction",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
 ]
 
@@ -4199,6 +4237,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-sha256-hasher"
+version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0037386961c0d633421f53560ad7c80675c0447cba4d1bb66d60974dd486c7ea"
+dependencies = [
+ "sha2 0.10.8",
+ "solana-define-syscall 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "solana-hash 2.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
 name = "solana-short-vec"
 version = "2.2.1"
 dependencies = [
@@ -4216,13 +4265,14 @@ version = "2.2.1"
 dependencies = [
  "solana-hard-forks",
  "solana-hash 2.3.0",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
 ]
 
 [[package]]
 name = "solana-signature"
 version = "2.3.0"
 dependencies = [
+ "badchain-pubkey",
  "bincode",
  "bs58",
  "curve25519-dalek 4.1.3",
@@ -4235,7 +4285,6 @@ dependencies = [
  "serde_json",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
  "solana-short-vec",
  "solana-signature",
@@ -4245,7 +4294,7 @@ dependencies = [
 name = "solana-signer"
 version = "2.2.1"
 dependencies = [
- "solana-pubkey",
+ "badchain-pubkey",
  "solana-signature",
  "solana-transaction-error",
 ]
@@ -4280,9 +4329,9 @@ dependencies = [
 name = "solana-stable-layout"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "memoffset",
  "solana-instruction",
- "solana-pubkey",
 ]
 
 [[package]]
@@ -4302,7 +4351,7 @@ dependencies = [
  "solana-instruction",
  "solana-program-error",
  "solana-pubkey",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "solana-sysvar-id",
 ]
 
@@ -4323,15 +4372,32 @@ dependencies = [
 ]
 
 [[package]]
+name = "solana-system-interface"
+version = "1.0.0"
+source = "git+https://github.com/bandit-network/bad-system#960949f72057fa15f0a1faef9be84569aebef37d"
+dependencies = [
+ "js-sys",
+ "num-traits",
+ "serde",
+ "serde_derive",
+ "solana-decode-error",
+ "solana-instruction",
+ "solana-msg 2.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "solana-program-error",
+ "solana-pubkey",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "solana-system-transaction"
 version = "2.2.1"
 dependencies = [
+ "badchain-pubkey",
  "solana-hash 2.3.0",
  "solana-keypair",
  "solana-message",
- "solana-pubkey",
  "solana-signer",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "solana-transaction",
 ]
 
@@ -4388,6 +4454,7 @@ version = "2.2.1"
 name = "solana-transaction"
 version = "2.2.3"
 dependencies = [
+ "badchain-pubkey",
  "badchain-sdk-ids",
  "bincode",
  "borsh 1.5.5",
@@ -4404,13 +4471,12 @@ dependencies = [
  "solana-nonce",
  "solana-packet",
  "solana-presigner",
- "solana-pubkey",
  "solana-sanitize 2.2.1",
- "solana-sha256-hasher",
+ "solana-sha256-hasher 2.2.1",
  "solana-short-vec",
  "solana-signature",
  "solana-signer",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "solana-transaction",
  "solana-transaction-error",
  "solana-vote-interface",
@@ -4441,6 +4507,7 @@ dependencies = [
  "arbitrary",
  "badchain-clock",
  "badchain-epoch-schedule",
+ "badchain-pubkey",
  "badchain-rent",
  "badchain-sdk-ids",
  "bincode",
@@ -4455,11 +4522,10 @@ dependencies = [
  "solana-hash 2.3.0",
  "solana-instruction",
  "solana-logger",
- "solana-pubkey",
  "solana-serde-varint",
  "solana-serialize-utils 2.2.1",
  "solana-short-vec",
- "solana-system-interface",
+ "solana-system-interface 1.0.0 (git+https://github.com/bandit-network/bad-system)",
  "solana-vote-interface",
 ]
 

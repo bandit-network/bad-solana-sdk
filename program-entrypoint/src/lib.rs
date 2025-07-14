@@ -7,8 +7,8 @@
 extern crate alloc;
 use {
     alloc::vec::Vec,
+    badchain_pubkey::Pubkey,
     solana_account_info::AccountInfo,
-    solana_pubkey::Pubkey,
     std::{
         alloc::Layout,
         cell::RefCell,
@@ -21,13 +21,13 @@ use {
 // need to re-export msg for custom_heap_default macro, `AccountInfo` and `Pubkey` for
 // entrypoint_no_alloc macro
 pub use {
+    badchain_pubkey::Pubkey as __Pubkey,
     solana_account_info::AccountInfo as __AccountInfo,
     solana_account_info::MAX_PERMITTED_DATA_INCREASE,
     // Re-exporting for custom_panic
     solana_define_syscall::definitions::{sol_log_ as __log, sol_panic_ as __panic},
     solana_msg::msg as __msg,
     solana_program_error::ProgramResult,
-    solana_pubkey::Pubkey as __Pubkey,
 };
 
 /// User implemented function to process an instruction

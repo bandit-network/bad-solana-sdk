@@ -2,8 +2,8 @@
 
 use {
     crate::stable_vec::StableVec,
+    badchain_pubkey::Pubkey,
     solana_instruction::{AccountMeta, Instruction},
-    solana_pubkey::Pubkey,
     std::fmt::Debug,
 };
 
@@ -20,7 +20,7 @@ use {
 ///
 /// ```
 /// # use solana_instruction::Instruction;
-/// # use solana_pubkey::Pubkey;
+/// # use badchain_pubkey::Pubkey;
 /// # use solana_stable_layout::stable_instruction::StableInstruction;
 /// # let program_id = Pubkey::default();
 /// # let accounts = Vec::default();

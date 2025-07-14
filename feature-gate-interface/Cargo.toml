@@ -15,7 +15,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 [features]
 bincode = [
     "dep:bincode",
-    "dep:solana-account",
+    "dep:badchain-account",
     "dep:solana-account-info",
     "dep:solana-instruction",
     "dep:solana-program-error",
@@ -30,11 +30,11 @@ serde = ["dep:serde", "dep:serde_derive"]
 bincode = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-account = { workspace = true, optional = true }
+badchain-account = { workspace = true, optional = true }
 solana-account-info = { workspace = true, optional = true }
 solana-instruction = { workspace = true, optional = true }
 solana-program-error = { workspace = true, optional = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 badchain-rent = { workspace = true, optional = true }
 badchain-sdk-ids = { workspace = true }
 solana-system-interface = { workspace = true, optional = true, features = [

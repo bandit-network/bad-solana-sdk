@@ -29,7 +29,7 @@ borsh = [
     "solana-hash/borsh",
     "solana-instruction/borsh",
     "solana-program-error/borsh",
-    "solana-pubkey/borsh",
+    "badchain-pubkey/borsh",
 ]
 dev-context-only-utils = ["solana-instructions-sysvar/dev-context-only-utils"]
 frozen-abi = [
@@ -40,7 +40,7 @@ frozen-abi = [
     "solana-fee-calculator/frozen-abi",
     "solana-hash/frozen-abi",
     "solana-instruction/frozen-abi",
-    "solana-pubkey/frozen-abi",
+    "badchain-pubkey/frozen-abi",
     "badchain-rent/frozen-abi",
     "solana-short-vec/frozen-abi",
     "badchain-sysvar/frozen-abi",
@@ -98,7 +98,7 @@ solana-program-error = { workspace = true, features = ["serde"] }
 solana-program-memory = { workspace = true }
 solana-program-option = { workspace = true }
 solana-program-pack = { workspace = true }
-solana-pubkey = { workspace = true, features = [
+badchain-pubkey = { workspace = true, features = [
     "bytemuck",
     "curve25519",
     "serde",
@@ -134,7 +134,7 @@ getrandom = { workspace = true, features = ["custom"] }
 solana-define-syscall = { workspace = true }
 
 [dev-dependencies]
-solana-pubkey = { workspace = true, features = ["dev-context-only-utils"] }
+badchain-pubkey = { workspace = true, features = ["dev-context-only-utils"] }
 badchain-sysvar = { workspace = true, features = ["dev-context-only-utils"] }
 
 [target.'cfg(not(target_os = "solana"))'.dev-dependencies]

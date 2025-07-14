@@ -1,4 +1,4 @@
-use {siphasher::sip::SipHasher13, solana_hash::Hash, solana_pubkey::Pubkey, std::hash::Hasher};
+use {badchain_pubkey::Pubkey, siphasher::sip::SipHasher13, solana_hash::Hash, std::hash::Hasher};
 
 #[derive(Debug, Clone)]
 pub struct EpochRewardsHasher {

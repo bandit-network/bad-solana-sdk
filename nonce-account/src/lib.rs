@@ -1,8 +1,8 @@
 //! Functions related to nonce accounts.
 
 use {
+    badchain_account::{state_traits::StateMut, AccountSharedData, ReadableAccount},
     badchain_sdk_ids::system_program,
-    solana_account::{state_traits::StateMut, AccountSharedData, ReadableAccount},
     solana_hash::Hash,
     solana_nonce::{
         state::{Data, State},
@@ -74,9 +74,9 @@ pub fn get_system_account_kind(account: &AccountSharedData) -> Option<SystemAcco
 mod tests {
     use {
         super::*,
+        badchain_pubkey::Pubkey,
         solana_fee_calculator::FeeCalculator,
         solana_nonce::state::{Data, DurableNonce},
-        solana_pubkey::Pubkey,
     };
 
     #[test]

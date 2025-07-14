@@ -10,10 +10,10 @@ use {
         v0::{self, LoadedAddresses},
         AccountKeys, AddressLoader, MessageHeader, SanitizedVersionedMessage, VersionedMessage,
     },
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::{ed25519_program, secp256k1_program, secp256r1_program},
     solana_hash::Hash,
     solana_instruction::{BorrowedAccountMeta, BorrowedInstruction},
-    solana_pubkey::Pubkey,
     solana_sanitize::Sanitize,
     std::{borrow::Cow, collections::HashSet, convert::TryFrom},
 };

@@ -1,6 +1,6 @@
 use {
     crate::Keypair,
-    solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey,
     solana_signature::Signature,
     solana_signer::Signer,
     std::borrow::{Borrow, Cow},

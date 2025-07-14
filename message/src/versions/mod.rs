@@ -5,8 +5,8 @@ use {
         compiled_instruction::CompiledInstruction, legacy::Message as LegacyMessage,
         v0::MessageAddressTableLookup, MessageHeader,
     },
+    badchain_pubkey::Pubkey,
     solana_hash::Hash,
-    solana_pubkey::Pubkey,
     solana_sanitize::{Sanitize, SanitizeError},
     std::collections::HashSet,
 };

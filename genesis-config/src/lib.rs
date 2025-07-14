@@ -10,16 +10,16 @@ pub use solana_cluster_type::ClusterType;
 #[cfg(feature = "frozen-abi")]
 use solana_frozen_abi_macro::{frozen_abi, AbiExample};
 use {
+    badchain_account::{Account, AccountSharedData},
     badchain_clock::{UnixTimestamp, DEFAULT_TICKS_PER_SLOT},
     badchain_epoch_schedule::EpochSchedule,
+    badchain_pubkey::Pubkey,
     badchain_rent::Rent,
     badchain_sdk_ids::system_program,
-    solana_account::{Account, AccountSharedData},
     solana_fee_calculator::FeeRateGovernor,
     solana_inflation::Inflation,
     solana_keypair::Keypair,
     solana_poh_config::PohConfig,
-    solana_pubkey::Pubkey,
     solana_signer::Signer,
     solana_time_utils::years_as_slots,
     std::{
@@ -305,10 +305,10 @@ mod tests {
             AccountSharedData::new(10_000, 0, &Pubkey::default()),
         );
         config.add_account(
-            solana_pubkey::new_rand(),
+            badchain_pubkey::new_rand(),
             AccountSharedData::new(1, 0, &Pubkey::default()),
         );
-        config.add_native_instruction_processor("hi".to_string(), solana_pubkey::new_rand());
+        config.add_native_instruction_processor("hi".to_string(), badchain_pubkey::new_rand());
 
         assert_eq!(config.accounts.len(), 2);
         assert!(config

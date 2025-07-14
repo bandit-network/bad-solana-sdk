@@ -19,7 +19,7 @@ frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro"]
 serde = [
     "dep:serde",
     "dep:serde_derive",
-    "solana-account/serde",
+    "badchain-account/serde",
     "badchain-clock/serde",
     "solana-cluster-type/serde",
     "badchain-epoch-schedule/serde",
@@ -35,7 +35,7 @@ chrono = { workspace = true, features = ["alloc"] }
 memmap2 = { workspace = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
-solana-account = { workspace = true }
+badchain-account = { workspace = true }
 badchain-clock = { workspace = true }
 solana-cluster-type = { workspace = true }
 badchain-epoch-schedule = { workspace = true }
@@ -47,7 +47,7 @@ solana-inflation = { workspace = true }
 solana-keypair = { workspace = true }
 solana-logger = { workspace = true }
 solana-poh-config = { workspace = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 badchain-rent = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-sha256-hasher = { workspace = true }
@@ -57,7 +57,7 @@ solana-time-utils = { workspace = true }
 
 [dev-dependencies]
 solana-genesis-config = { path = ".", features = ["serde"] }
-solana-pubkey = { workspace = true, features = ["rand"] }
+badchain-pubkey = { workspace = true, features = ["rand"] }
 
 [lints]
 workspace = true

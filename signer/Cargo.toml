@@ -15,6 +15,6 @@ all-features = true
 rustdoc-args = ["--cfg=docsrs"]
 
 [dependencies]
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 solana-signature = { workspace = true }
 solana-transaction-error = { workspace = true }

@@ -22,4 +22,4 @@ bincode = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 solana-program-error = { workspace = true }
 solana-program-memory = { workspace = true }
-solana-pubkey = { workspace = true, default-features = false }
+badchain-pubkey = { workspace = true, default-features = false }

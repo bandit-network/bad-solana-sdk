@@ -28,7 +28,7 @@ frozen-abi = [
     "dep:solana-frozen-abi-macro",
     "dep:solana-logger",
     "solana-hash/frozen-abi",
-    "solana-pubkey/frozen-abi",
+    "badchain-pubkey/frozen-abi",
     "serde",
 ]
 serde = [
@@ -36,7 +36,7 @@ serde = [
     "dep:serde_derive",
     "dep:solana-short-vec",
     "solana-hash/serde",
-    "solana-pubkey/serde",
+    "badchain-pubkey/serde",
 ]
 
 [dependencies]
@@ -51,7 +51,7 @@ solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-hash = { workspace = true }
 solana-instruction = { workspace = true, features = ["std"] }
 solana-logger = { workspace = true, optional = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 solana-sanitize = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 solana-short-vec = { workspace = true, optional = true }

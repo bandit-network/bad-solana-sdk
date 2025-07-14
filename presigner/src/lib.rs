@@ -1,6 +1,6 @@
 pub use solana_signer::PresignerError;
 use {
-    solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey,
     solana_signature::Signature,
     solana_signer::{Signer, SignerError},
 };

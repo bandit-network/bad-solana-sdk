@@ -238,7 +238,7 @@ impl OffchainMessage {
     /// Verify that the message signature is valid for the given public key
     pub fn verify(
         &self,
-        signer: &solana_pubkey::Pubkey,
+        signer: &badchain_pubkey::Pubkey,
         signature: &Signature,
     ) -> Result<bool, SanitizeError> {
         Ok(signature.verify(signer.as_ref(), &self.serialize()?))

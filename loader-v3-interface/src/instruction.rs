@@ -3,9 +3,9 @@
 #[cfg(feature = "bincode")]
 use {
     crate::{get_program_data_address, state::UpgradeableLoaderState},
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::{bpf_loader_upgradeable::id, loader_v4, sysvar},
     solana_instruction::{error::InstructionError, AccountMeta, Instruction},
-    solana_pubkey::Pubkey,
     solana_system_interface::instruction as system_instruction,
 };
 
@@ -60,7 +60,7 @@ pub enum UpgradeableLoaderInstruction {
     /// follows:
     ///
     /// ```
-    /// # use solana_pubkey::Pubkey;
+    /// # use badchain_pubkey::Pubkey;
     /// # use badchain_sdk_ids::bpf_loader_upgradeable;
     /// # let program_address = &[];
     /// let (program_data_address, _) = Pubkey::find_program_address(

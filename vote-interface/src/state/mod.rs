@@ -9,8 +9,8 @@ use solana_frozen_abi_macro::AbiExample;
 use {
     crate::authorized_voters::AuthorizedVoters,
     badchain_clock::{Epoch, Slot, UnixTimestamp},
+    badchain_pubkey::Pubkey,
     badchain_rent::Rent,
-    solana_pubkey::Pubkey,
     std::{collections::VecDeque, fmt::Debug},
 };
 #[cfg(test)]

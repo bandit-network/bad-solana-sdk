@@ -1,3 +1,5 @@
+/// Re-export solana_pubkey::declare_id for easy usage within the macro
+pub use badchain_pubkey::declare_id;
 /// Macro for accessing data from the `package.metadata` section of the Cargo manifest
 ///
 /// # Arguments
@@ -48,8 +50,6 @@
 /// It does *not* currently support accessing TOML array elements directly.
 /// TOML tables are not supported.
 pub use solana_package_metadata_macro::package_metadata;
-/// Re-export solana_pubkey::declare_id for easy usage within the macro
-pub use solana_pubkey::declare_id;
 
 /// Convenience macro for declaring a program id from Cargo.toml package metadata.
 ///

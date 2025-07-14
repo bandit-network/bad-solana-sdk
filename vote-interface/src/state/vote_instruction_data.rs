@@ -5,8 +5,8 @@ use solana_frozen_abi_macro::{frozen_abi, AbiExample};
 use {
     crate::state::{Lockout, MAX_LOCKOUT_HISTORY},
     badchain_clock::{Slot, UnixTimestamp},
+    badchain_pubkey::Pubkey,
     solana_hash::Hash,
-    solana_pubkey::Pubkey,
     std::{collections::VecDeque, fmt::Debug},
 };
 

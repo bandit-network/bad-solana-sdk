@@ -3,6 +3,6 @@
 fn test_sdk_pubkey_export() {
     assert_eq!(
         solana_sdk::pubkey!("ZkTokenProof1111111111111111111111111111111"),
-        solana_pubkey::pubkey!("ZkTokenProof1111111111111111111111111111111")
+        badchain_pubkey::pubkey!("ZkTokenProof1111111111111111111111111111111")
     );
 }

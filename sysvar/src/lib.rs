@@ -83,7 +83,7 @@ pub mod __private {
     pub use solana_define_syscall::definitions;
     pub use {solana_program_entrypoint::SUCCESS, solana_program_error::ProgramError};
 }
-use solana_pubkey::Pubkey;
+use badchain_pubkey::Pubkey;
 #[allow(deprecated)]
 #[doc(inline)]
 #[deprecated(
@@ -252,10 +252,10 @@ mod tests {
         super::*,
         crate::program_stubs::{set_syscall_stubs, SyscallStubs},
         badchain_clock::Epoch,
+        badchain_pubkey::Pubkey,
         serde_derive::{Deserialize, Serialize},
         solana_program_entrypoint::SUCCESS,
         solana_program_error::ProgramError,
-        solana_pubkey::Pubkey,
         std::{cell::RefCell, rc::Rc},
     };
 
@@ -264,13 +264,13 @@ mod tests {
     struct TestSysvar {
         something: Pubkey,
     }
-    solana_pubkey::declare_id!("TestSysvar111111111111111111111111111111111");
+    badchain_pubkey::declare_id!("TestSysvar111111111111111111111111111111111");
     impl badchain_sysvar_id::SysvarId for TestSysvar {
-        fn id() -> solana_pubkey::Pubkey {
+        fn id() -> badchain_pubkey::Pubkey {
             id()
         }
 
-        fn check_id(pubkey: &solana_pubkey::Pubkey) -> bool {
+        fn check_id(pubkey: &badchain_pubkey::Pubkey) -> bool {
             check_id(pubkey)
         }
     }

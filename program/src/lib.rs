@@ -534,7 +534,7 @@ pub use solana_short_vec as short_vec;
 #[deprecated(since = "2.1.0", note = "Use `solana-stable-layout` crate instead")]
 pub use solana_stable_layout as stable_layout;
 pub use {
-    badchain_clock as clock, badchain_rent as rent,
+    badchain_clock as clock, badchain_pubkey as pubkey, badchain_rent as rent,
     badchain_sysvar::impl_sysvar_get,
     solana_account_info::{self as account_info, debug_account_data},
     solana_msg::msg,
@@ -543,7 +543,7 @@ pub use {
         self as entrypoint, custom_heap_default, custom_panic_default, entrypoint,
         entrypoint_no_alloc,
     },
-    solana_program_option as program_option, solana_pubkey as pubkey,
+    solana_program_option as program_option,
 };
 /// The [config native program][np].
 ///
@@ -554,9 +554,9 @@ pub mod config {
     }
 }
 
+pub use badchain_pubkey::{declare_deprecated_id, declare_id, pubkey};
 #[deprecated(since = "2.1.0", note = "Use `solana-sysvar-id` crate instead")]
 pub use badchain_sysvar_id::{declare_deprecated_sysvar_id, declare_sysvar_id};
-pub use solana_pubkey::{declare_deprecated_id, declare_id, pubkey};
 
 /// Convenience macro for doing integer division where the operation's safety
 /// can be checked at compile-time.

@@ -7,6 +7,7 @@ use borsh::io::Error as BorshIoError;
 #[cfg(feature = "serde")]
 use serde_derive::{Deserialize, Serialize};
 use {
+    badchain_pubkey::PubkeyError,
     core::fmt,
     num_traits::FromPrimitive,
     solana_instruction::error::{
@@ -21,7 +22,6 @@ use {
         UNSUPPORTED_SYSVAR,
     },
     solana_msg::msg,
-    solana_pubkey::PubkeyError,
     std::convert::TryFrom,
 };
 

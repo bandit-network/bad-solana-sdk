@@ -1,6 +1,6 @@
 use {
+    badchain_pubkey::{Pubkey, PUBKEY_BYTES},
     solana_instruction::error::InstructionError,
-    solana_pubkey::{Pubkey, PUBKEY_BYTES},
     std::{
         io::{BufRead as _, Cursor, Read},
         ptr,

@@ -1,6 +1,6 @@
 use {
     crate::{Signer, SignerError},
-    solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey,
     solana_signature::Signature,
 };
 

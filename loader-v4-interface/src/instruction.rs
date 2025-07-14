@@ -1,9 +1,9 @@
 //! Instructions for the v4 built-in loader program.
 #[cfg(feature = "bincode")]
 use {
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::loader_v4::id,
     solana_instruction::{AccountMeta, Instruction},
-    solana_pubkey::Pubkey,
 };
 
 #[repr(u8)]

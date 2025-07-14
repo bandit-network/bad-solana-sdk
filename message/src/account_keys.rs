@@ -1,7 +1,7 @@
 use {
     crate::{compiled_instruction::CompiledInstruction, v0::LoadedAddresses, CompileError},
+    badchain_pubkey::Pubkey,
     solana_instruction::Instruction,
-    solana_pubkey::Pubkey,
     std::{collections::BTreeMap, iter::zip, ops::Index},
 };
 

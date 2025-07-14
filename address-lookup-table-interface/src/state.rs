@@ -7,8 +7,8 @@ use solana_instruction::error::InstructionError;
 use {
     crate::error::AddressLookupError,
     badchain_clock::Slot,
+    badchain_pubkey::Pubkey,
     badchain_slot_hashes::{get_entries, SlotHashes, MAX_ENTRIES},
-    solana_pubkey::Pubkey,
     std::borrow::Cow,
 };
 

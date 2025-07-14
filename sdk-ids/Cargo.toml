@@ -13,7 +13,7 @@ edition = { workspace = true }
 targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
-solana-pubkey = { workspace = true, default-features = false }
+badchain-pubkey = { workspace = true, default-features = false }
 
 [lints]
 workspace = true

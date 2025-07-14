@@ -292,11 +292,11 @@ pub fn get_instruction_relative(
 mod tests {
     use {
         super::*,
+        badchain_pubkey::Pubkey,
         badchain_sdk_ids::sysvar::instructions::id,
         solana_account_info::AccountInfo,
         solana_instruction::{AccountMeta, BorrowedAccountMeta, BorrowedInstruction, Instruction},
         solana_program_error::ProgramError,
-        solana_pubkey::Pubkey,
         solana_sanitize::SanitizeError,
     };
 

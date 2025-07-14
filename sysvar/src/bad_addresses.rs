@@ -48,9 +48,9 @@
 
 use badchain_bad_addresses::BadAddress;
 #[cfg(feature = "bytemuck")]
-use bytemuck_derive::{Pod, Zeroable};
+use badchain_pubkey::Pubkey;
 #[cfg(feature = "bytemuck")]
-use solana_pubkey::Pubkey;
+use bytemuck_derive::{Pod, Zeroable};
 #[cfg(feature = "bincode")]
 use {crate::Sysvar, solana_account_info::AccountInfo};
 

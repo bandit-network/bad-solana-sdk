@@ -21,10 +21,10 @@ bincode = [
     "serde",
     "solana-instruction/bincode",
 ]
-bytemuck = ["dep:bytemuck", "solana-pubkey/bytemuck"]
+bytemuck = ["dep:bytemuck", "badchain-pubkey/bytemuck"]
 dev-context-only-utils = ["bincode", "bytemuck"]
 frozen-abi = ["dep:solana-frozen-abi", "dep:solana-frozen-abi-macro", "serde"]
-serde = ["dep:serde", "dep:serde_derive", "solana-pubkey/serde"]
+serde = ["dep:serde", "dep:serde_derive", "badchain-pubkey/serde"]
 
 [dependencies]
 bincode = { workspace = true, optional = true }
@@ -39,12 +39,12 @@ solana-frozen-abi-macro = { workspace = true, features = [
     "frozen-abi",
 ], optional = true }
 solana-instruction = { workspace = true, features = ["std"], optional = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 badchain-slot-hashes = { workspace = true }
 
 [target.'cfg(not(target_os = "solana"))'.dependencies]
-solana-pubkey = { workspace = true, features = ["curve25519"] }
+badchain-pubkey = { workspace = true, features = ["curve25519"] }
 
 [dev-dependencies]
 solana-address-lookup-table-interface = { path = ".", features = [

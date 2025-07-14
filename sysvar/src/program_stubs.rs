@@ -3,12 +3,12 @@
 #![cfg(not(target_os = "solana"))]
 
 use {
+    badchain_pubkey::Pubkey,
     base64::{prelude::BASE64_STANDARD, Engine},
     solana_account_info::AccountInfo,
     solana_instruction::{error::UNSUPPORTED_SYSVAR, Instruction},
     solana_program_error::ProgramResult,
     solana_program_memory::stubs,
-    solana_pubkey::Pubkey,
     std::sync::{Arc, RwLock},
 };
 

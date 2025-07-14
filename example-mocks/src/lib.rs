@@ -109,8 +109,8 @@ pub mod solana_rpc_client_nonce_utils {
     }
 }
 
-pub mod solana_account {
-    use {badchain_clock::Epoch, solana_pubkey::Pubkey};
+pub mod badchain_account {
+    use {badchain_clock::Epoch, badchain_pubkey::Pubkey};
     #[derive(Clone)]
     pub struct Account {
         pub lamports: u64,
@@ -145,7 +145,7 @@ pub mod solana_signature {
 }
 
 pub mod solana_signer {
-    use {solana_pubkey::Pubkey, thiserror::Error};
+    use {badchain_pubkey::Pubkey, thiserror::Error};
 
     #[derive(Error, Debug)]
     #[error("mock-error")]
@@ -166,7 +166,7 @@ pub mod solana_signer {
 }
 
 pub mod solana_keypair {
-    use {crate::solana_signer::Signer, solana_pubkey::Pubkey};
+    use {crate::solana_signer::Signer, badchain_pubkey::Pubkey};
     pub struct Keypair;
 
     impl Keypair {
@@ -185,11 +185,11 @@ pub mod solana_keypair {
 pub mod solana_transaction {
     use {
         crate::solana_signer::{signers::Signers, SignerError},
+        badchain_pubkey::Pubkey,
         serde_derive::Serialize,
         solana_hash::Hash,
         solana_instruction::Instruction,
         solana_message::Message,
-        solana_pubkey::Pubkey,
     };
 
     pub mod versioned {
@@ -276,17 +276,17 @@ pub mod solana_transaction {
 pub mod solana_sdk {
     pub use {
         crate::{
-            solana_account::{self as account, state_traits as account_utils},
+            badchain_account::{self as account, state_traits as account_utils},
             solana_signer::{self as signer, signers},
         },
         badchain_clock::Clock,
+        badchain_pubkey::{self as pubkey, Pubkey},
         badchain_sdk_ids::{
             system_program,
             sysvar::{self, clock},
         },
         solana_hash as hash, solana_instruction as instruction, solana_keccak_hasher as keccak,
         solana_message as message, solana_nonce as nonce,
-        solana_pubkey::{self as pubkey, Pubkey},
         solana_system_interface::instruction as system_instruction,
     };
 

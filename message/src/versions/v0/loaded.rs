@@ -2,8 +2,8 @@
 use serde_derive::{Deserialize, Serialize};
 use {
     crate::{v0, AccountKeys},
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::bpf_loader_upgradeable,
-    solana_pubkey::Pubkey,
     std::{borrow::Cow, collections::HashSet},
 };
 

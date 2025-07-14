@@ -8,7 +8,7 @@ use {
             LandedVote, Lockout, VoteState,
         },
     },
-    solana_pubkey::Pubkey,
+    badchain_pubkey::Pubkey,
     std::collections::VecDeque,
 };
 

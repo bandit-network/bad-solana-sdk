@@ -19,4 +19,4 @@ solana-account-info = { workspace = true }
 solana-define-syscall = { workspace = true }
 solana-msg = { workspace = true }
 solana-program-error = { workspace = true }
-solana-pubkey = { workspace = true, default-features = false }
+badchain-pubkey = { workspace = true, default-features = false }

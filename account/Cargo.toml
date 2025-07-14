@@ -1,5 +1,5 @@
 [package]
-name = "solana-account"
+name = "badchain-account"
 description = "Solana Account type"
 documentation = "https://docs.rs/solana-account"
 version = "2.2.1"
@@ -26,13 +26,13 @@ frozen-abi = [
     "dep:solana-frozen-abi",
     "dep:solana-frozen-abi-macro",
     "dep:solana-logger",
-    "solana-pubkey/frozen-abi",
+    "badchain-pubkey/frozen-abi",
 ]
 serde = [
     "dep:serde",
     "dep:serde_bytes",
     "dep:serde_derive",
-    "solana-pubkey/serde",
+    "badchain-pubkey/serde",
 ]
 
 [dependencies]
@@ -47,9 +47,10 @@ solana-frozen-abi = { workspace = true, optional = true }
 solana-frozen-abi-macro = { workspace = true, optional = true }
 solana-instruction = { workspace = true }
 solana-logger = { workspace = true, optional = true }
-solana-pubkey = { workspace = true }
+badchain-pubkey = { workspace = true }
 badchain-sdk-ids = { workspace = true }
 badchain-sysvar = { workspace = true, features = ["bincode"], optional = true }
+solana-account = { workspace = true }
 
 [dev-dependencies]
-solana-account = { path = ".", features = ["dev-context-only-utils"] }
+badchain-account = { path = ".", features = ["dev-context-only-utils"] }

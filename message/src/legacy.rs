@@ -23,12 +23,12 @@ use {
     crate::{
         compiled_instruction::CompiledInstruction, compiled_keys::CompiledKeys, MessageHeader,
     },
+    badchain_pubkey::Pubkey,
     badchain_sdk_ids::{
         bpf_loader, bpf_loader_deprecated, bpf_loader_upgradeable, system_program, sysvar,
     },
     solana_hash::Hash,
     solana_instruction::Instruction,
-    solana_pubkey::Pubkey,
     solana_sanitize::{Sanitize, SanitizeError},
     std::{collections::HashSet, convert::TryFrom, str::FromStr},
 };

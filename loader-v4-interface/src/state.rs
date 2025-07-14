@@ -1,4 +1,4 @@
-use solana_pubkey::Pubkey;
+use badchain_pubkey::Pubkey;
 
 #[repr(u64)]
 #[cfg_attr(feature = "frozen-abi", derive(solana_frozen_abi_macro::AbiExample))]

@@ -1301,6 +1301,34 @@ pub fn new_rand() -> Pubkey {
     Pubkey::from(rand::random::<[u8; PUBKEY_BYTES]>())
 }
 
+/// SolanaPubkey → BadchainPubkey
+impl From<solana_pubkey::Pubkey> for Pubkey {
+    fn from(src: solana_pubkey::Pubkey) -> Self {
+        Pubkey::new_from_array(src.to_bytes()) // or however your newtype is constructed
+    }
+}
+
+/// &SolanaPubkey → BadchainPubkey
+impl From<&solana_pubkey::Pubkey> for Pubkey {
+    fn from(src: &solana_pubkey::Pubkey) -> Self {
+        Pubkey::new_from_array(src.to_bytes())
+    }
+}
+
+/// BadchainPubkey → SolanaPubkey
+impl From<Pubkey> for solana_pubkey::Pubkey {
+    fn from(src: Pubkey) -> Self {
+        solana_pubkey::Pubkey::new_from_array(src.to_bytes()) // or however your newtype is constructed
+    }
+}
+
+/// &BadchainPubkey → SolanaPubkey
+impl From<&Pubkey> for solana_pubkey::Pubkey {
+    fn from(src: &Pubkey) -> Self {
+        solana_pubkey::Pubkey::new_from_array(src.to_bytes())
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use {super::*, core::str::from_utf8, strum::IntoEnumIterator};

@@ -1,4 +1,4 @@
-use solana_pubkey::Pubkey;
+use badchain_pubkey::Pubkey;
 
 /// Describes a single account read or written by a program during instruction
 /// execution.

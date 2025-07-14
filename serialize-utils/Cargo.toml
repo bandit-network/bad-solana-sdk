@@ -16,7 +16,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 solana-instruction = { workspace = true, default-features = false, features = [
     "std",
 ] }
-solana-pubkey = { workspace = true, default-features = false }
+badchain-pubkey = { workspace = true, default-features = false }
 solana-sanitize = { workspace = true }
 
 [dev-dependencies]
@@ -24,7 +24,7 @@ bincode = { workspace = true }
 borsh = { workspace = true }
 rand = { workspace = true }
 serde = { workspace = true }
-solana-pubkey = { workspace = true, default-features = false, features = [
+badchain-pubkey = { workspace = true, default-features = false, features = [
     "borsh",
     "serde",
 ] }

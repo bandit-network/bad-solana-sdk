@@ -207,7 +207,9 @@ sha2 = "0.10.8"
 sha3 = "0.10.8"
 signal-hook = "0.3.17"
 siphasher = "0.3.11"
-solana-account = { path = "account", version = "2.2.1" }
+badchain-account = { path = "account", version = "2.2.1" }
+solana-account={version = "2.2.1"}
+solana-pubkey={version = "2.4.0"}
 solana-account-info = { path = "account-info", version = "2.2.1" }
 solana-address-lookup-table-interface = { path = "address-lookup-table-interface", version = "2.2.2" }
 solana-atomic-u64 = { path = "atomic-u64", version = "2.2.1" }
@@ -269,7 +271,7 @@ solana-program-error = { path = "program-error", version = "2.2.1" }
 solana-program-memory = { path = "program-memory", version = "2.2.1" }
 solana-program-option = { path = "program-option", version = "2.2.1" }
 solana-program-pack = { path = "program-pack", version = "2.2.1" }
-solana-pubkey = { path = "pubkey", version = "2.2.1", default-features = false }
+badchain-pubkey = { path = "pubkey", version = "2.2.1", default-features = false }
 solana-quic-definitions = { path = "quic-definitions", version = "2.2.1" }
 badchain-rent = { path = "rent", version = "2.2.1", default-features = false }
 badchain-rent-collector = { path = "rent-collector", version = "2.2.1" }
@@ -299,7 +301,7 @@ badchain-raffle-649 = {path = "raffle-649",version = "0.0.1"}
 badchain-slot-history = { path = "slot-history", version = "2.2.1" }
 solana-stable-layout = { path = "stable-layout", version = "2.2.1" }
 solana-stake-interface = { version = "1.2.1" }
-solana-system-interface = "1.0"
+solana-system-interface ={git = "https://github.com/bandit-network/bad-system"}
 solana-system-transaction = { path = "system-transaction", version = "2.2.1" }
 badchain-sysvar = { path = "sysvar", version = "2.2.1" }
 badchain-sysvar-id = { path = "sysvar-id", version = "2.2.1" }
@@ -356,14 +358,14 @@ opt-level = 1
 # in your Cargo.toml. If you still hit duplicate-type errors with the patch
 # statements in place, run `cargo update -p solana-program` to remove extraneous
 # versions from your Cargo.lock file.
-solana-account = { path = "account" }
+badchain-account = { path = "account" }
 badchain-clock = { path = "clock" }
 solana-cpi = { path = "cpi" }
 solana-frozen-abi = { path = "frozen-abi" }
 solana-frozen-abi-macro = { path = "frozen-abi-macro" }
 solana-instruction = { path = "instruction" }
 solana-program-error = { path = "program-error" }
-solana-pubkey = { path = "pubkey" }
+badchain-pubkey = { path = "pubkey" }
 badchain-rent = { path = "rent" }
 solana-signature = { path = "signature" }
 badchain-sysvar-id = { path = "sysvar-id" }

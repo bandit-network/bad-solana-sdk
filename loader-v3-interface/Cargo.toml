@@ -22,7 +22,7 @@ serde = [
     "dep:serde",
     "dep:serde_bytes",
     "dep:serde_derive",
-    "solana-pubkey/serde",
+    "badchain-pubkey/serde",
 ]
 
 [dependencies]
@@ -36,7 +36,7 @@ solana-frozen-abi-macro = { workspace = true, features = [
     "frozen-abi",
 ], optional = true }
 solana-instruction = { workspace = true, features = ["std"] }
-solana-pubkey = { workspace = true, features = ["curve25519"] }
+badchain-pubkey = { workspace = true, features = ["curve25519"] }
 badchain-sdk-ids = { workspace = true }
 solana-system-interface = { workspace = true, features = [
     "bincode",

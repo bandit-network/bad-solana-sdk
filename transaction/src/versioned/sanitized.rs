@@ -42,9 +42,9 @@ impl SanitizedVersionedTransaction {
 mod tests {
     use {
         super::*,
+        badchain_pubkey::Pubkey,
         solana_hash::Hash,
         solana_message::{v0, VersionedMessage},
-        solana_pubkey::Pubkey,
     };
 
     #[test]

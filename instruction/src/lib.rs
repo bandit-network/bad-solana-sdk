@@ -17,7 +17,7 @@
 
 #[cfg(feature = "std")]
 extern crate std;
-use solana_pubkey::Pubkey;
+use badchain_pubkey::Pubkey;
 #[cfg(feature = "std")]
 use std::vec::Vec;
 pub mod account_meta;

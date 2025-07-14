@@ -1,9 +1,9 @@
 //! Account information.
 #![cfg_attr(docsrs, feature(doc_auto_cfg))]
 use {
+    badchain_pubkey::Pubkey,
     solana_program_error::ProgramError,
     solana_program_memory::sol_memset,
-    solana_pubkey::Pubkey,
     std::{
         cell::{Ref, RefCell, RefMut},
         fmt,
@@ -312,7 +312,7 @@ impl<'a, T: Account> IntoAccountInfo<'a> for &'a mut (Pubkey, T) {
 /// ```
 /// use solana_program_error::ProgramResult;
 /// use solana_account_info::{AccountInfo, next_account_info};
-/// use solana_pubkey::Pubkey;
+/// use badchain_pubkey::Pubkey;
 /// # use solana_program_error::ProgramError;
 ///
 /// pub fn process_instruction(
