@@ -315,7 +315,7 @@ version = "0.0.1"
 dependencies = [
  "badchain-sdk-ids",
  "badchain-sysvar-id",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_derive",
  "solana-hash 2.3.0",
@@ -480,7 +480,7 @@ dependencies = [
  "bytemuck",
  "bytemuck_derive",
  "lazy_static",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_derive",
  "serial_test",
@@ -2466,9 +2466,18 @@ version = "0.8.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
 dependencies = [
- "libc",
  "rand_chacha 0.3.1",
  "rand_core 0.6.4",
+]
+
+[[package]]
+name = "rand"
+version = "0.9.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "44c5af06bb1b7d3216d91932aed5265164bf384dc89cd6ba05cf59a35f5f76ea"
+dependencies = [
+ "rand_chacha 0.9.0",
+ "rand_core 0.9.5",
 ]
 
 [[package]]
@@ -2492,6 +2501,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "rand_chacha"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb"
+dependencies = [
+ "ppv-lite86",
+ "rand_core 0.9.5",
+]
+
+[[package]]
 name = "rand_core"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2505,8 +2524,14 @@ name = "rand_core"
 version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
+
+[[package]]
+name = "rand_core"
+version = "0.9.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "76afc826de14238e6e8c374ddcc1fa19e374fd8dd986b0d2af0d02377261d83c"
 dependencies = [
- "getrandom 0.2.15",
+ "getrandom 0.3.3",
 ]
 
 [[package]]
@@ -3114,7 +3139,7 @@ dependencies = [
  "cfg_eval",
  "ff",
  "group",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_json",
  "serde_with",
@@ -3981,7 +4006,7 @@ dependencies = [
  "getrandom 0.2.15",
  "js-sys",
  "num-traits",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_derive",
  "solana-atomic-u64 2.2.1",
@@ -4159,7 +4184,7 @@ name = "solana-serde-varint"
 version = "2.2.2"
 dependencies = [
  "bincode",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_derive",
  "solana-short-vec",
@@ -4171,7 +4196,7 @@ version = "2.2.1"
 dependencies = [
  "bincode",
  "borsh 1.5.5",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "solana-instruction",
  "solana-pubkey",
@@ -4228,7 +4253,7 @@ dependencies = [
  "curve25519-dalek 4.1.3",
  "ed25519-dalek",
  "five8",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde-big-array",
  "serde_derive",
@@ -4447,7 +4472,7 @@ dependencies = [
  "itertools 0.12.1",
  "num-derive",
  "num-traits",
- "rand 0.8.5",
+ "rand 0.9.4",
  "serde",
  "serde_derive",
  "solana-frozen-abi",
